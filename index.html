@@ -172,8 +172,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="芳芳加油！！"><a href="#芳芳加油！！" class="headerlink" title="芳芳加油！！"></a>芳芳加油！！</h1><p><img src="https://github.com/HEtinto/MyPostImage/blob/master/blog/68594452_p0.jpg?raw=true" alt="Image text"></p>
-
+        <h1 id="Git配置与使用"><a href="#Git配置与使用" class="headerlink" title="Git配置与使用"></a>Git配置与使用</h1>
+        
+          <a class="article-more-a" href="/2020/07/26/hello/#more">more >></a>
+        
       
 
       
@@ -235,71 +237,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h1 id="基于Hexo的从零开始的博客搭建"><a href="#基于Hexo的从零开始的博客搭建" class="headerlink" title="基于Hexo的从零开始的博客搭建"></a>基于Hexo的从零开始的博客搭建</h1><h2 id="1-安装Node-js"><a href="#1-安装Node-js" class="headerlink" title="1.安装Node.js"></a>1.安装Node.js</h2><ul>
-<li><p>官网:<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a></p>
-</li>
-<li><p>下载标准版安装包安装</p>
-</li>
-<li><p>打开Node.js,使用<code>node -v</code>查看版本信息，使用<code>npm -v</code>查看包管理器版本信息</p>
-<h2 id="2-搭建"><a href="#2-搭建" class="headerlink" title="2.搭建"></a>2.搭建</h2></li>
-<li><p>先将包源换成是淘宝的国内包源，键入<br><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
-</li>
-<li><p>键入 <code>cnpm -v</code>可以查看cnpm的版本</p>
-</li>
-<li><p>安装hexo,键入<br><code>cnpm install -g hexo-cli</code></p>
-</li>
-<li><p>键入<code>hexo -v</code>查看hexo版本信息</p>
-</li>
-<li><p>键入<code>pwd</code>查看当前路径</p>
-</li>
-<li><p>创建一个博客文件夹，键入<code>mkdir blog</code></p>
-</li>
-<li><p>进入当前文件夹键入<code>cd blog</code></p>
-</li>
-<li><p>初始化当前文件夹，键入<code>hexo init</code></p>
-</li>
-<li><p>启动博客，键入<code>hexo s</code></p>
-</li>
-<li><p>创建一篇新的博客<br><code>hexo n &quot;我的第一篇博客&quot;</code></p>
-</li>
-<li><p>清除缓存文件db.json和已生成的静态文件public<br><code>hexo clean</code></p>
-</li>
-<li><p>再次生成<br><code>hexo g</code></p>
-<h2 id="3-将博客部署到github上"><a href="#3-将博客部署到github上" class="headerlink" title="3.将博客部署到github上"></a>3.将博客部署到github上</h2></li>
-<li><p>首先在github上新建一个仓库例如:<code>HEtinto.github.io</code>，第一部分必须是用户名</p>
-</li>
-<li><p>在Node中导入git模块,键入<code>cnpm install --save hexo-deployer-git</code></p>
-</li>
-<li><p>设置<code>_config.yml</code>文件<br><img src="https://github.com/HEtinto/MyPostImage/blob/master/blog/my_config.png?raw=true" alt="Image text"></p>
-</li>
-<li><p>部署到远端，键入<code>hexo -d</code>，输入github账号和密码</p>
-<h2 id="4-更换主题"><a href="#4-更换主题" class="headerlink" title="4.更换主题"></a>4.更换主题</h2></li>
-<li><p>下载主题<br><code>git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</code></p>
-</li>
-<li><p>下载完主题后，确认一下，然后修改<code>_config.yml</code>文件,将<code>themes</code>中修改为<code>yilia</code><br><img src="https://github.com/HEtinto/MyPostImage/blob/master/blog/themes.png?raw=true" alt="Image text"></p>
-</li>
-<li><p>执行 <code>hexo clean</code></p>
-</li>
-<li><p>重新生成，键入<code>hexo g</code></p>
-</li>
-<li><p>重新开始，启动博客(在本地启动):<code>hexo s</code>，随后可以进入4000端口查看网站</p>
-</li>
-<li><p>推到远端:<code>hexo d</code> </p>
-<h2 id="5-所有文章显示"><a href="#5-所有文章显示" class="headerlink" title="5.所有文章显示"></a>5.所有文章显示</h2></li>
-<li><p>在博客根目录执行以下命令<br><code>npm i hexo-generator-json-content --save</code> </p>
-</li>
-<li><p>在根目录<code>_config.yml</code>添加配置 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">jsonContent:</span><br><span class="line">    meta: false</span><br><span class="line">    pages: false</span><br><span class="line">    posts:</span><br><span class="line">      title: true</span><br><span class="line">      date: true</span><br><span class="line">      path: true</span><br><span class="line">      text: false</span><br><span class="line">      raw: false</span><br><span class="line">      content: false</span><br><span class="line">      slug: false</span><br><span class="line">      updated: false</span><br><span class="line">      comments: false</span><br><span class="line">      link: false</span><br><span class="line">      permalink: false</span><br><span class="line">      excerpt: false</span><br><span class="line">      categories: false</span><br><span class="line">      tags: true</span><br></pre></td></tr></table></figure>
-<h2 id="6-总结"><a href="#6-总结" class="headerlink" title="6.总结"></a>6.总结</h2></li>
-<li><p>下载Node.js后，需要在<code>Cmder</code>里面装<code>git</code>和<code>node</code></p>
-</li>
-<li><p>然后装<code>hexo</code></p>
-</li>
-<li><p>使用hexo里面的命令<code>hexo init</code>来初始化一个博客，初始化博客之后就可以把农科部署到本地或<code>github</code></p>
-</li>
-</ul>
-
+        <h1 id="基于Hexo的从零开始的博客搭建"><a href="#基于Hexo的从零开始的博客搭建" class="headerlink" title="基于Hexo的从零开始的博客搭建"></a>基于Hexo的从零开始的博客搭建</h1>
+        
+          <a class="article-more-a" href="/2020/07/25/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/#more">more >></a>
+        
       
 
       
