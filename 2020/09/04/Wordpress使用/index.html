@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>java学习笔记（一） | Hexo</title>
+  <title>Wordpress安装与使用 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="java学习笔记">
+  <meta name="description" content="Wordpress安装与使用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java学习笔记（一）">
-<meta property="og:url" content="http://yoursite.com/2020/08/01/java%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
+<meta property="og:title" content="Wordpress安装与使用">
+<meta property="og:url" content="http://yoursite.com/2020/09/04/Wordpress%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="java学习笔记">
+<meta property="og:description" content="Wordpress安装与使用">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-08-01T14:39:04.000Z">
-<meta property="article:modified_time" content="2020-08-01T13:28:37.327Z">
+<meta property="article:published_time" content="2020-09-04T00:22:00.000Z">
+<meta property="article:modified_time" content="2020-09-04T00:23:21.487Z">
 <meta property="article:author" content="HEtinto(yujianming)">
-<meta property="article:tag" content="java">
+<meta property="article:tag" content="Wordpress">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -159,58 +159,189 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-java学习（一）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Wordpress使用" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      java学习笔记（一）
+      Wordpress安装与使用
     </h1>
   
 
         
-        <a href="/2020/08/01/java%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-08-01T14:39:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-01</time>
+        <a href="/2020/09/04/Wordpress%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2020-09-04T00:22:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="java学习笔记"><a href="#java学习笔记" class="headerlink" title="java学习笔记"></a>java学习笔记</h1><a id="more"></a> 
-<h2 id="1-基本类型、数组和枚举类型"><a href="#1-基本类型、数组和枚举类型" class="headerlink" title="1.基本类型、数组和枚举类型"></a>1.基本类型、数组和枚举类型</h2><h3 id="1-1-标识符和关键字"><a href="#1-1-标识符和关键字" class="headerlink" title="1.1 标识符和关键字"></a>1.1 标识符和关键字</h3><ul>
-<li>标识符由字母、下划线、美元符号和数字组成，长度不受限制 </li>
-<li>标识符的第一个字符不能是数字字符 </li>
-<li>标识符不能是关键字 </li>
-<li>标识符不能是true、false和null（尽管true、false和null不是java关键字） </li>
-<li>标识符区分大小写 <h3 id="1-2-基本数据类型"><a href="#1-2-基本数据类型" class="headerlink" title="1.2 基本数据类型"></a>1.2 基本数据类型</h3></li>
-<li>逻辑类型：boolean </li>
-<li>整数类型：byte、short、int、long </li>
-<li>字符类型：char </li>
-<li>浮点类型：float、double </li>
-</ul>
-<p>例1.1基本数据类型的输出</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用控制台编译时需要确保</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Example1_1</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String args[])</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">char</span> ch1 = <span class="string">'w'</span>, ch2 = <span class="string">'好'</span>;</span><br><span class="line">        <span class="keyword">int</span> p1 = <span class="number">32831</span>, p2 = <span class="number">30452</span>;</span><br><span class="line">        System.out.println(<span class="string">"\""</span> + ch1 + <span class="string">"\" 的位置："</span> + (<span class="keyword">int</span>)ch1);</span><br><span class="line">        System.out.println(<span class="string">"\""</span> + ch2 + <span class="string">"\" 的位置："</span> + (<span class="keyword">int</span>)ch2);</span><br><span class="line">        System.out.println(<span class="string">"第"</span> + p1 + <span class="string">"个位置上的字符是："</span> + (<span class="keyword">char</span>)p1);</span><br><span class="line">        System.out.println(<span class="string">"第"</span> + p2 + <span class="string">"个位置上的字符是："</span> = (<span class="keyword">char</span>)p2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>例1.2基本数据类型的转换 </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Example1_2</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String args[])</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> c = <span class="number">128</span>;</span><br><span class="line">        <span class="keyword">long</span> d = <span class="number">77777</span>;</span><br><span class="line">        <span class="keyword">float</span> f = <span class="number">2e3F</span>;</span><br><span class="line">        <span class="keyword">double</span> g = <span class="number">3.14</span> - <span class="number">300</span>;</span><br><span class="line">        <span class="keyword">double</span> result = f*g;</span><br><span class="line">        System.out.println(<span class="string">"f="</span> + f);</span><br><span class="line">        System.out.println(<span class="string">"g="</span> + g);</span><br><span class="line">        System.out.println(<span class="string">"result="</span> + result);</span><br><span class="line">        g = <span class="number">1234.123456789</span>;</span><br><span class="line">        c = (<span class="keyword">int</span>)d;</span><br><span class="line">        f = (<span class="keyword">float</span>)g;</span><br><span class="line">        System.out.println(<span class="string">"c="</span> + c);</span><br><span class="line">        System.out.println(<span class="string">"d="</span> +  d);</span><br><span class="line">        System.out.println(<span class="string">"f="</span> + f);</span><br><span class="line">        System.out.println(<span class="string">"g="</span> + g);</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="1-3从命令行输入与输出数据"><a href="#1-3从命令行输入与输出数据" class="headerlink" title="1.3从命令行输入与输出数据"></a>1.3从命令行输入与输出数据</h3><p>  Scanner是JDK 1.5新增加的一个类，可以使用该类创建一个对象： </p>
-<p>  <code>Scanner reader = new Scanner(System.in);</code></p>
-<p>  然后reader对象调用nextBoolean()、nextByte()、nextShort()、nextInt()、nextLong()、<br>  nextFloat()和nextDouble()，读取用户在命令行（例如，MS-DOS窗口）输入的各种基本类型数据。<br>  上述方法在执行过程中都会发生阻塞，程序等待用户输入数据并按Enter键确认。 </p>
-<p>例1.3命令行输入输出 </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Example1_3</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String args[])</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"请输入若干个数，每输入一个数按回车确认"</span>);</span><br><span class="line">        System.out.println(<span class="string">"最后输入数字0结束输入操作"</span>);</span><br><span class="line">        Scanner reader = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">double</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">double</span> x = reader.nextDouble();</span><br><span class="line">        <span class="keyword">while</span>(x != <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                m = m + <span class="number">1</span>;</span><br><span class="line">                sum = sum + x;</span><br><span class="line">                x = reader.nextDouble();</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(m + <span class="string">"个数的和为"</span> + sum);</span><br><span class="line">            System.out.println(m + <span class="string">"个数的平均值"</span> + sum/m);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="Wordpress安装与使用"><a href="#Wordpress安装与使用" class="headerlink" title="Wordpress安装与使用"></a>Wordpress安装与使用</h1><a id="more"></a> 
 
-<h3 id="1-4-数组"><a href="#1-4-数组" class="headerlink" title="1.4 数组"></a>1.4 数组</h3><ul>
-<li>声明数组 </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line">数组的元素类型    数组名称[];</span><br><span class="line">数组的元素类型[]    数组的名称;</span><br><span class="line">&#96;&#96;&#96; </span><br><span class="line">* 创建数组 </span><br><span class="line"></span><br><span class="line">为数组分配内存空间 ，数组索引从0开始，在访问数组元素时注意不要越界。</span><br><span class="line"></span><br><span class="line">&#96;&#96;数组名称 &#x3D; new 数组元素的类型[数组元素的个数]&#96;&#96; </span><br><span class="line">* &#96;&#96;length&#96;&#96;的使用 </span><br><span class="line"></span><br><span class="line">  对于一唯数组，&quot;数组名字.length&quot;的值就是数组中元素的个数；对于二维数组，&quot;数组名字.length&quot;的值是它含有的一唯数组的个数。 </span><br><span class="line"></span><br><span class="line">例1.4数组的使用 </span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;java</span><br><span class="line">public class Example1_4</span><br><span class="line">&#123;</span><br><span class="line">    public static void main (String args[])</span><br><span class="line">    &#123;</span><br><span class="line">    int a[] &#x3D; &#123;1, 2, 3, 4&#125;;</span><br><span class="line">    int b[] &#x3D; &#123;100, 200, 300&#125;;</span><br><span class="line">    System.out.println(&quot;数组a的个数 &#x3D; &quot; &#x3D; a.length);</span><br><span class="line">    System.out.println(&quot;数组b的元素个数 &#x3D; &quot; + b.length);</span><br><span class="line">    System.out.println(&quot;数组a的引用 &#x3D; &quot; + a);</span><br><span class="line">    System.out.println(&quot;数组b的引用 &#x3D; &quot; + b);</span><br><span class="line">    System.out.println(&quot;a &#x3D;&#x3D; b 的结果是&quot; + (a &#x3D;&#x3D; b));</span><br><span class="line">    a &#x3D; b;</span><br><span class="line">    System.out.println(&quot;数组a的元素个数 &#x3D; &quot; + a.length);</span><br><span class="line">    System.out.println(&quot;数组b的元素个数 &#x3D; &quot; + b.length);</span><br><span class="line">    System.out.println(&quot;a&#x3D;&#x3D;b 的结果是&quot; + (a &#x3D;&#x3D; b));</span><br><span class="line">    System.out.println(&quot;a[0]&#x3D;&quot; + a[0] + &quot;,a[1]&#x3D;&quot; + a[1] + &quot;,a[2]&#x3D;&quot; + a[2]);</span><br><span class="line">    System.out.println(&quot;b[0]&#x3D;&quot; + b[0] + &quot;,b[1]&#x3D;&quot; + b[1] &#x3D; &quot;,b[2]&#x3D;&quot; + b[2]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96; </span><br><span class="line">* 数组复制 </span><br><span class="line"></span><br><span class="line">&#96;&#96;public static void arraycopy(sourceArray, int index1, copyArray, int index2, int  length)&#96;&#96; </span><br><span class="line"></span><br><span class="line">将数组sourceArray中的索引值从&#96;&#96;index1&#96;&#96;到&#96;&#96;index1+length-1&#96;&#96;复制到&#96;&#96;copyArray&#96;&#96;的第&#96;&#96;index2&#96;&#96;到第&#96;&#96;index2+length&#96;&#96;,如果数组copyArray不能存放下复制的数据，程序将引发异常。 </span><br><span class="line"></span><br><span class="line">&#96;&#96;public static double[] copyOf(double[] original, int newLength)&#96;&#96; </span><br><span class="line"></span><br><span class="line">可以将参数original指定的数组中从索引0开始的newLength个元素复制到一个新的数组中，并返回这个新数组，且新数组的长度为newLength。 </span><br><span class="line"></span><br><span class="line">&#96;&#96;public static double[] copyOfRange(double[] original, int from, int to)&#96;&#96; </span><br><span class="line"></span><br><span class="line">该方法可以把参数original指定的数组中从索引from至to-1的元素复制到一个新数组中，并返回这个新数组，即新数组的长度为to-from。 </span><br><span class="line">* 排序与二分查找 </span><br><span class="line"></span><br><span class="line">Array调用方法： 实现快速排序，升序排序。</span><br><span class="line"></span><br><span class="line">&#96;&#96;public static void sort(double a[])&#96;&#96; </span><br><span class="line"></span><br><span class="line">将a指定的double类型数组中索引start至end-1的元素的值按照升序排序。 </span><br><span class="line"></span><br><span class="line">&#96;&#96;public static void sort(double a[], int start, int end)&#96;&#96; </span><br><span class="line"></span><br><span class="line">二分查找 </span><br><span class="line"></span><br><span class="line">&#96;&#96;public static int binarySearch(double[] a, double number)&#96;&#96;</span><br><span class="line">### 1.5枚举类型 </span><br><span class="line">&#96;&#96;&#96;java</span><br><span class="line">enum 枚举名</span><br><span class="line">&#123;</span><br><span class="line">    常量列表</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 例如：</span><br><span class="line">enum Season</span><br><span class="line">&#123;</span><br><span class="line">    春季,夏季,秋季,冬季</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2-类和对象"><a href="#2-类和对象" class="headerlink" title="2.类和对象"></a>2.类和对象</h2><h3 id="2-1-类"><a href="#2-1-类" class="headerlink" title="2.1 类"></a>2.1 类</h3><ul>
-<li>类的实现包括两部分，即类的声明和类体 </li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> 类名</span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    类体的内容</span><br><span class="line">&#125;</span><br><span class="line">``` </span><br><span class="line">* 实例变量和类变量 </span><br><span class="line"></span><br><span class="line">  用关键字``<span class="keyword">static</span>``声明的称为类变量或静态变量，否则称为实例变量，即需要创建实例才会拥有实际空间的变量。 </span><br><span class="line">* 成员变量的隐藏 </span><br><span class="line"></span><br><span class="line">  如果局部变量的名字与成员变量的名字相同，那么成员变量被隐藏，即这个成员变量在这个方法内暂时失效。 </span><br><span class="line">### 2.2 对象 </span><br><span class="line">* 对象的声明 </span><br><span class="line"></span><br><span class="line">``类的名字  对象名称`` </span><br><span class="line">* 对象声明后，需要为对象分配内存空间 </span><br><span class="line"></span><br><span class="line">``已经声明的对象名称  = <span class="keyword">new</span>  类名称()``</span><br><span class="line"></span><br><span class="line">* 对象的内存模型 </span><br><span class="line"></span><br><span class="line">  在执行分配内存的语句时，系统会先给类中的成员变量分配内存空间，然后执行构造函数，若声明成员变量或构造函数内没有对</span><br><span class="line">变量指定初值，那么系统会赋予成员变量默认值。同时，会给出一个信息，来确保对象的成员变量的归属性，它返回一个引用给对象，</span><br><span class="line">使得对象能对自己的成员变量进行操作。 </span><br><span class="line">### 2.3 对象的引用和实体 </span><br><span class="line"></span><br><span class="line">  java的对象是在堆``(heap)``中分配内存，对象的引用是在栈``(stack)``中分配内存。java拥有垃圾回收机制，它会周期性地</span><br><span class="line">  检测某个实体是否已经不再被任何对象所引用，若是发现这样的实体，就释放实体的内存。 </span><br><span class="line">### 2.4 对象的组合 </span><br><span class="line"></span><br><span class="line">  可以在一个类中声明其他类的对象，以此达到组合对象的目的。 </span><br><span class="line">### 2.5 可变参数 </span><br><span class="line">```java</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> ··· x)</span></span></span><br><span class="line"><span class="function"><span class="comment">// 用 ··· 表示若干个参数，在调用时，通过下标来调用，如： x[0],x[1],···,x[m]</span></span></span><br><span class="line"><span class="function">``` </span></span><br><span class="line"><span class="function">### 2.6 <span class="keyword">static</span> 关键字 </span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">  类中的类变量不需要创建对象就会被分配内存空间，而实例变量在创建对象时分配内存空间，类变量的内存空间直到程序退出运行，才释放所占有的内存。</span></span><br><span class="line"><span class="function">  当类的字节码文件被加载到内存时，类的实例方法不会被分配入口地址，在该类创建对象后，类的实例方法才被分配入口地址，且只分配一次，被所有的对象</span></span><br><span class="line"><span class="function">  所共享，在该类再创建对象时，就不在分配入口地址。当所有对象都不存在时，方法的入口地址才被取消。对于类方法，在类的字节码被加载到内存中时就被</span></span><br><span class="line"><span class="function">  分配了入口地址，可以直接通过类名称调用。类方法的入口地址直到程序退出才被取消。 </span></span><br><span class="line"><span class="function">### 2.7 <span class="keyword">this</span> 关键字 </span></span><br><span class="line"><span class="function">  <span class="keyword">this</span>表示当前对象，通常使用<span class="keyword">this</span>来表明当前对象，以区分局部变量防止混淆，因此当实例变量和局部变量名字相同时，<span class="keyword">this</span>变量不可省略。 </span></span><br><span class="line"><span class="function">### 2.8 包 </span></span><br><span class="line"><span class="function">```<span class="keyword">package</span> 包名``` 使用包之后必须到包的最上层目录的父级目录去编译源文件，并且在编译时需要将路径写好，例如 </span></span><br><span class="line"><span class="function">```java</span></span><br><span class="line"><span class="function"><span class="comment">// 文件1</span></span></span><br><span class="line"><span class="function"><span class="keyword">package</span> tom.jiafei</span>;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;···&#125;</span><br><span class="line"><span class="comment">// 文件2 </span></span><br><span class="line"><span class="keyword">package</span> tom.jiafei;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Example4_11</span></span>&#123;···&#125;</span><br><span class="line"><span class="comment">// 文件1和文件2保存在C:\1000\tom\jiafei，然后进入到tom\jiafei的上一层目录1000中编译两个文件：</span></span><br><span class="line">C:\<span class="number">1000</span> javac tom\jiafei\Student.java</span><br><span class="line">C：\<span class="number">1000</span> javac tom\jiafei\Example4_11.java</span><br><span class="line"><span class="comment">// 运行 </span></span><br><span class="line">C：\<span class="number">1000</span>\ java tom.jiafei.Example4_11</span><br><span class="line">``` </span><br><span class="line">### 2.9 import 语句 </span><br><span class="line"></span><br><span class="line">  <span class="keyword">import</span>语句用于引入类库中的类，基本语法格式如： </span><br><span class="line">  </span><br><span class="line">  ``<span class="keyword">import</span> java.util.Data`` </span><br><span class="line">  </span><br><span class="line">  ``<span class="keyword">import</span> java.util.*``</span><br><span class="line">### 3.0 访问权限 </span><br><span class="line"></span><br><span class="line">  对于变量和函数的访问权限，只需要在创建时在前面加上相应的关键字即可，如：</span><br><span class="line">```java</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Tom</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">float</span> weight;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">float</span> <span class="title">f</span><span class="params">(<span class="keyword">float</span> a, <span class="keyword">float</span> b)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a + b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">``` </span><br><span class="line">  </span><br><span class="line">  对于不用``<span class="keyword">private</span>,<span class="keyword">public</span>,<span class="keyword">protected</span>``修饰的成员变量和方法称为友好变量和友好方法，对于友好变量和方法，只允许在同一个包中访问。</span><br><span class="line">  如果用<span class="keyword">import</span>语句引入了另一个包中的类，那么用该类创建的对象将不能访问自己的友好变量和友好方法。受保护的变量和方法具有和友好变量和方法</span><br><span class="line">  相同的访问属性，即只能在同一个包中访问，但是它们之间也会有区别。 </span><br><span class="line">### 3.1 自动装箱与拆箱 </span><br><span class="line"></span><br><span class="line">  类 ``Integer num = <span class="number">100</span>；``等价于``Integer number = <span class="keyword">new</span> Integer(m)``; </span><br><span class="line">  </span><br><span class="line">  ``<span class="keyword">int</span> x = num + num;``等价于``<span class="keyword">int</span> x = number.intValue() + number.intValue();`` </span><br><span class="line">### 3.2 反编译器和文件生成器 </span><br><span class="line"></span><br><span class="line">  查看源码类中的<span class="keyword">public</span>方法的名字和<span class="keyword">public</span>成员变量的名字：``javap java.util.Data`` </span><br><span class="line">  </span><br><span class="line">  查看类中的所有方法和成员变量：``javap -privae java.util.Data`` </span><br><span class="line">  </span><br><span class="line">  javadoc注释：</span><br><span class="line">  ```java</span><br><span class="line">    <span class="comment">/** 注释内容 */</span></span><br></pre></td></tr></table></figure>
 
-<p>  使用<code>javadoc Example.java</code>在文件夹下生成多个HTML文档，查看这些文档可以知道源文件中类的组成结构，如类的方法和成员变量。<br>  同时也可以通过下面的方法指定生成目录：<code>javadoc -d C:\document Example.java</code> </p>
+
+<h2 id="一、在官网下载wordpress"><a href="#一、在官网下载wordpress" class="headerlink" title="一、在官网下载wordpress"></a>一、在官网下载wordpress</h2><p>&ensp;&ensp;每个版本的wordpress在使用上可能存在一些差异，可以使用指定的版本进行学习。解压下载的压缩包文件，并将解压好的wordpress文件夹放到网站根目录（www/）。 </p>
+<h2 id="二、访问Wordpress中的index-php文件"><a href="#二、访问Wordpress中的index-php文件" class="headerlink" title="二、访问Wordpress中的index.php文件"></a>二、访问Wordpress中的index.php文件</h2><p>&ensp;&ensp;使用<code>localhost/wordpress文件夹/</code>即可访问<code>www/</code>目录下的<code>Wordpress</code>文件夹的默认主页<code>index.php</code>。然后按照提示设置： </p>
+<ul>
+<li><p>填写mysql的用户名和密码，默认为root；</p>
+</li>
+<li><p>在数据库名称一栏中填写自己创建的数据库名称；</p>
+</li>
+<li><p>表前缀不用修改，默认为：<code>wp_</code>；</p>
+</li>
+<li><p>数据库主机不用修改，默认为：<code>localhost</code>；</p>
+</li>
+<li><p>配置好后点击进行安装；</p>
+<h3 id="下一步填写需要的信息"><a href="#下一步填写需要的信息" class="headerlink" title="下一步填写需要的信息"></a>下一步填写需要的信息</h3></li>
+<li><p>站点名称：填写自己网站的名称；</p>
+</li>
+<li><p>用户名：网站管理员的用户名，不能包含中文；</p>
+</li>
+<li><p>电子邮件：填写管理员的邮箱地址，Wordpress将会把通知发到管理员邮箱；</p>
+</li>
+</ul>
+<h2 id="三、登陆Wordpress"><a href="#三、登陆Wordpress" class="headerlink" title="三、登陆Wordpress"></a>三、登陆Wordpress</h2><h3 id="1、Wordpress下负责登陆和验证的文件"><a href="#1、Wordpress下负责登陆和验证的文件" class="headerlink" title="1、Wordpress下负责登陆和验证的文件"></a>1、Wordpress下负责登陆和验证的文件</h3><p>&ensp;&ensp;<code>wp-login.php</code>    文件负责验证和登陆；我们只需要在浏览器地址栏中访问<code>wp-login.php</code>文件即可访问登陆界面。 </p>
+<h3 id="2、登陆成功后跳转到管理员后台"><a href="#2、登陆成功后跳转到管理员后台" class="headerlink" title="2、登陆成功后跳转到管理员后台"></a>2、登陆成功后跳转到管理员后台</h3><p>&ensp;&ensp;鼠标放到站点名称上会弹出查看站点的按钮，点击后将显示网站前台，在点击时按住<code>ctrl</code>键可以打开一个新的选项卡。 </p>
+<h3 id="3、Wordpress后台管理"><a href="#3、Wordpress后台管理" class="headerlink" title="3、Wordpress后台管理"></a>3、Wordpress后台管理</h3><ul>
+<li><p>插件操作</p>
+<p>&ensp;&ensp;插件可以给Wordpress增加全新的功能；同时，插件也可以修改Wordpress原有的功能；插件也可以删除Wordpress站点原有的功能。</p>
+<h4 id="1-安装插件"><a href="#1-安装插件" class="headerlink" title="1.安装插件"></a>1.安装插件</h4><p>&ensp;&ensp;点击<code>安装插件</code>按钮，在接下来的界面中可以选择需要的插件进行安装；同时也提供搜索插件的功能。</p>
+<ul>
+<li><p>点击<code>现在安装</code>即可安装插件</p>
+</li>
+<li><p>插件安装失败</p>
+<p>&ensp;&ensp;在线安装时会提供插件的下载地址，我们可以通过下载地址下载插件。插件下载完成后，在<code>插件</code>页面点击上传插件即可；同时也可以在互联网上去下载其他非官方插件。同时上传的插件必须时指定的压缩格式，一般为zip格式。</p>
+<p>&ensp;&ensp;安装的插件会保存在<code>/Wordpress文件夹/wp-content/plugins/</code>目录下。所以我们可以直接将插件解压，手动放到插件所在目录。</p>
+</li>
+</ul>
+<h4 id="2-管理已经安装的插件"><a href="#2-管理已经安装的插件" class="headerlink" title="2.管理已经安装的插件"></a>2.管理已经安装的插件</h4><p>&ensp;&ensp;在<code>已安装的插件</code>中可以管理插件。在需要启用的插件下有<code>启用</code>按钮，点击该按钮即可启用，对于已经开启的插件可以点击<code>停用</code>按钮将其停用。</p>
+<h3 id="3-编辑插件"><a href="#3-编辑插件" class="headerlink" title="3.编辑插件"></a>3.编辑插件</h3><p>&ensp;&ensp;点击<code>编辑</code>按钮可以编辑插件的源代码，但是这个功能并不常用。同时，在<code>已安装的插件</code>中也可以对插件进行相应的编辑。 </p>
+<h4 id="4-解决后台加载过慢的问题"><a href="#4-解决后台加载过慢的问题" class="headerlink" title="4.解决后台加载过慢的问题"></a>4.解决后台加载过慢的问题</h4><h5 id="1）无法正常加载用户头像的问题"><a href="#1）无法正常加载用户头像的问题" class="headerlink" title="1）无法正常加载用户头像的问题"></a>1）无法正常加载用户头像的问题</h5><p>&ensp;&ensp;解决办法，直接安装一个插件——<code>cn-avatar</code>，然后启用该插件即可。</p>
+<h5 id="2）谷歌字体的原因"><a href="#2）谷歌字体的原因" class="headerlink" title="2）谷歌字体的原因"></a>2）谷歌字体的原因</h5><p>&ensp;&ensp;因为谷歌字体由谷歌服务提供，在国内的无法响应；可以安装<code>disable google fonts</code>插件，然后启用该插件即可。</p>
+</li>
+<li><p>文章 </p>
+<p>&ensp;&ensp;网站的内容建设十分重要，不论你想做什么样的网站，一般情况下，至少包括两种类型的内容，一种是数量很多的主要内容，另一种是数量少的其他内容。</p>
+<p>&ensp;&ensp;其中<code>文章</code>就是一种内容类型，用于发布网站的主要内容（数量多），而<code>页面</code>用于发表其他内容，内容分类等。</p>
+<h4 id="1-分类目录"><a href="#1-分类目录" class="headerlink" title="1.分类目录"></a>1.分类目录</h4><p>&ensp;&ensp;通过分类将内容进行分类和归纳整理，提升用户体验。分类目录就是将内容分到具体的类别。没有必要对数量比较少的内容进行分类，而<code>页面</code>就是用于发布其他数量比较少的内容，所以<code>页面</code>下面没有<code>分类目录</code>。</p>
+<h4 id="2-标签"><a href="#2-标签" class="headerlink" title="2.标签"></a>2.标签</h4><p>&ensp;&ensp;<code>标签</code>可以理解为关键字，我们将具有同一个属性的东西用标签来标记，用户可以通过标签快速寻找到带有同一属性的内容。</p>
+<h4 id="3-规划网站"><a href="#3-规划网站" class="headerlink" title="3.规划网站"></a>3.规划网站</h4><p>&ensp;&ensp;首先，你要区分出，你的网站的主要内容和其他内容。一旦区分出主要内容和其他内容，你就知道应该在文章还是在页面处发布内容了。其次，你对主要内容进行分门别类，划分细分类目录。再次，才是发布内容。不需要事先划分标签，标签是一种非常灵活的，对内容进行归纳整理的方式。 </p>
+<p>&ensp;&ensp;假设需要使用Wordpress做一个新闻网站：</p>
+<h5 id="1）主要内容是新闻，其他内容是公司杰嫂介绍、广告洽谈"><a href="#1）主要内容是新闻，其他内容是公司杰嫂介绍、广告洽谈" class="headerlink" title="1）主要内容是新闻，其他内容是公司杰嫂介绍、广告洽谈"></a>1）主要内容是新闻，其他内容是公司杰嫂介绍、广告洽谈</h5><h5 id="2）具体的新闻内容"><a href="#2）具体的新闻内容" class="headerlink" title="2）具体的新闻内容"></a>2）具体的新闻内容</h5><h5 id="3）分类目录"><a href="#3）分类目录" class="headerlink" title="3）分类目录"></a>3）分类目录</h5><ul>
+<li>名称：可以使用友好的中文</li>
+<li>别名：通常是英文，让网址中不出现中文</li>
+<li>父节点；设置当前分类的父级分类节点</li>
+<li>图像描述：分类目录的简单介绍，可能不会起作用</li>
+</ul>
+<h4 id="4）写文章"><a href="#4）写文章" class="headerlink" title="4）写文章"></a>4）写文章</h4><p>&ensp;&ensp;点击<code>文章</code>下的<code>写文章</code>可以开始写第一篇文章。</p>
+<ul>
+<li><p>摘要</p>
+<p>可以介绍文章的主要内容，作用是在网站的文章列表中显示出摘要，让用户快速了解文章的主要内容，如果用户感兴趣，可以进一步点击<code>详细</code>按钮查看全文。</p>
+</li>
+<li><p>trackback</p>
+<p>如果发布的文章引用或者是借用了别人的内容，那么可以在此处通知对方。这个通知是Wordpress程序本身自动执行的，不需要你的参与。对方是否能接受这个通知，完全取决于对方使用的程序能不能接受通知。如果不能的话，即使你发布了通知，也没有任何作用。一旦对方能够接收通知，那么会在对方文章的评论区显示。不建议使用，因为会耗费一定的资源。</p>
+</li>
+<li><p>自定义栏目</p>
+<p>假如你发布的是商品，但是在发布界面根本找不到可以发布商品价格的地方。此时，就可以在这个地方填写你的产品价格。</p>
+</li>
+<li><p>评论</p>
+<p>可以显示文章的评论信息，也可以在此处给文章添加评论、管理用户的评论。</p>
+</li>
+<li><p>别名</p>
+<p>和分类目录的别名一样，是为了在网址中不显示中文</p>
+</li>
+<li><p>公开度</p>
+<p>可以设置文章的可见等级，私密只有管理员自己可以看到，如果设置为公开，则都可以看到，也可以设置为输入密码后可见。</p>
+</li>
+<li><p>形式</p>
+<p>可以选择文章的形式，但是会依据主题而有所不同。</p>
+</li>
+<li><p>分类目录</p>
+<p>设置当前文章所属分类。</p>
+</li>
+<li><p>标签</p>
+<p>设置文章的标签，用于用户快速查找含有同一标签的文章。</p>
+</li>
+<li><p>特色图像</p>
+<p>为文章设置缩略图，与摘要很相似，可以在网站上直接展示出缩略图，因为图像可以直观地展示很多信息，让用户快速了解文章主要内容，如果用户感兴趣就可以通过点击图片查看文章。</p>
+</li>
+</ul>
+<h4 id="5）写页面"><a href="#5）写页面" class="headerlink" title="5）写页面"></a>5）写页面</h4><p>&ensp;&ensp;关于层级：</p>
+<p>页面可以分层级，就像分类目录一样，可以一级、二级、三级、……N级。只是，很少对页面进行分级。</p>
+<p>&ensp;&ensp;关于排序：</p>
+<p>如果你的网站发布了一些页面，则可以通过排序设置这些页面的展示顺序。默认情况下，是按照页面名称的字母顺序——a、b、c……的升序形式呈现。在发布页面的时候设置排序数字，数字越小，排序越前。</p>
+<p>&ensp;&ensp;所有页面：</p>
+<p>和文章的管理方式一样。 </p>
+<h4 id="6）媒体库"><a href="#6）媒体库" class="headerlink" title="6）媒体库"></a>6）媒体库</h4><p>&ensp;&ensp;点击<code>多媒体</code>可以进入媒体库管理界面，在此处可以上传视频、音频、图片等。在媒体库可以编辑、永久删除、查看自己上传的媒体文件。</p>
+<p>&ensp;&ensp;替代文本：</p>
+<p>当图片无法正常显示时可以使用文本替代图片给出提示信息。</p>
+<p>&ensp;&ensp;添加媒体；</p>
+<p>使用<code>添加</code>按钮，在文件上传处可以看到文件上传的大小限制。</p>
+<h4 id="7）评论"><a href="#7）评论" class="headerlink" title="7）评论"></a>7）评论</h4><p>&ensp;&ensp;点击<code>评论</code>按钮可以对用户评论进行管理，以及查看用户评论的其他信息。可以驳回、回复、快速编辑、编辑、设为垃圾评论、移至回收站等。可以设置用户发表的评论是否需要批准才显示出来。</p>
+<h4 id="8）用户"><a href="#8）用户" class="headerlink" title="8）用户"></a>8）用户</h4><p>&ensp;&ensp;点击<code>用户</code>可以添加用户。在角色中可以对用户进行权限和分组的设置，不同的角色具有不同的权限。</p>
+<h4 id="9）用户"><a href="#9）用户" class="headerlink" title="9）用户"></a>9）用户</h4><p>&ensp;&ensp;点击<code>用户</code>可以编辑各个用户的信息、资料。</p>
+<p>可视化的编辑器：</p>
+<p>&ensp;&ensp;勾选与不勾选会改变编辑器的外观。</p>
+<p>管理界面配色方案：</p>
+<p>&ensp;&ensp;可以改变管理界面的主题配色。</p>
+<p>键盘快捷键：</p>
+<p>&ensp;&ensp;使用键盘快捷键可以添加一些功能，使得用户不用鼠标操作也可以实现一些功能。</p>
+<p>工具栏；</p>
+<p>&ensp;&ensp;网站前台登陆之后网站顶部会有一个工具栏，如果取消勾选则不显示。</p>
+<p>公开名称；</p>
+<p>&ensp;&ensp;设置网站显示昵称还是用户名。</p>
+<p>资料图片：</p>
+<p>&ensp;&ensp;需要在Gravatar网站上注册账户，并设置你的头像。当你在Wordpress网站中使用相同的邮件账户注册会员，那么Wordpress就会根据你的邮件账户信息从Gravatar网站中获取并展示出来。如果用户根本没有设置头像，则使用默认头像。</p>
+<p>&ensp;&ensp;可以在会话中登出其他地方的登陆状态。</p>
+<h5 id="1-所有用户"><a href="#1-所有用户" class="headerlink" title="1.所有用户"></a>1.所有用户</h5><p>&ensp;&ensp;用于管理用户，用于管理用户发表的文章、更改用户权限等。可以在选择用户进行资料更改。</p>
+<h4 id="10）工具"><a href="#10）工具" class="headerlink" title="10）工具"></a>10）工具</h4><h5 id="1-快速发布"><a href="#1-快速发布" class="headerlink" title="1.快速发布"></a>1.快速发布</h5><h5 id="ensp-ensp-首先需要将快速发布拖到浏览器书签栏，然后在其他的网页中将其他的网页截取下来进行编辑，然后发布为自己的网页。"><a href="#ensp-ensp-首先需要将快速发布拖到浏览器书签栏，然后在其他的网页中将其他的网页截取下来进行编辑，然后发布为自己的网页。" class="headerlink" title="&ensp;&ensp;首先需要将快速发布拖到浏览器书签栏，然后在其他的网页中将其他的网页截取下来进行编辑，然后发布为自己的网页。"></a>&ensp;&ensp;首先需要将<code>快速发布</code>拖到浏览器书签栏，然后在其他的网页中将其他的网页截取下来进行编辑，然后发布为自己的网页。</h5><h5 id="2-直接链接"><a href="#2-直接链接" class="headerlink" title="2.直接链接"></a>2.直接链接</h5><p>&ensp;&ensp;当不能使用快速发布时可以使用直接链接实现同样的功能。</p>
+<h4 id="11）外观"><a href="#11）外观" class="headerlink" title="11）外观"></a>11）外观</h4><p>&ensp;&ensp;点击<code>外观</code>进入外观管理界面。</p>
+<p><strong>主题</strong></p>
+<p>&ensp;&ensp;可以设置网站的主题，选择需要的主题，点击<code>启用</code>即可。可以通过不同的主题改变网站的视觉效果，同时，用户看到的网站的内容也会发生改变，显示什么内容是主题决定的，主题可以调用相应的内容。使用不同的主题，外观下的子菜单数量也不一样。</p>
+<p>&ensp;&ensp;主题文件放在<code>WWW/网站目录名/wp-content/themes/</code>目录下。</p>
+<p>&ensp;&ensp;<em>安装主题</em>：</p>
+<p>点击<code>主题&gt;添加主题</code>可以查看和安装主题库提供的主题，同时也支持上传下载的主题，或者自己将主题文件解压放到对应的文件夹下面。</p>
+<p><strong>自定义</strong></p>
+<p>&ensp;&ensp;站点的实时效果更改和预览 。 </p>
+<p><strong>菜单</strong></p>
+<p>&ensp;&ensp;可以在<code>编辑菜单</code>处，创建菜单，成功创建菜单之后，可以添加菜单项目。添加菜单项目之后还需要设置菜单， 主题位置可以设置菜单所在位置。还可以设置子级菜单。</p>
+<p><strong>顶部</strong></p>
+<p>&ensp;&ensp;可以在顶部添加图片等内容。</p>
+<p><strong>背景</strong></p>
+<p>&ensp;&ensp;可以设置网页的背景图片。</p>
+<h4 id="12）设置"><a href="#12）设置" class="headerlink" title="12）设置"></a>12）设置</h4><p><strong>常规</strong></p>
+<p>&ensp;&ensp;可以设置网站标题、副标题。其中Wordpress地址和站点地址可以不用修改。电子邮件地址用于接收站点相关通知的邮箱，一般是设置的管理员邮箱。成员资格用于设置网站是否允许注册，如果需要则勾选，其中新用户默认角色不要设置过高，一般保持不变，即为订阅者。时区设置依据所在国家来设置，还可以设置日期格式和时间格式。</p>
+<p><strong>撰写</strong></p>
+<p>&ensp;&ensp;设置默认文章分类目录、默认文章形式。可以设置通过邮件发布文章，并设置通过邮件发布的文章的默认目录。</p>
+<p>&ensp;&ensp;<em>更新服务</em>：当你发布新的文章和内容时，Wordpress会自动通知此处链接对应的服务，告诉它们，我们网站有内容更新。可以将百度的提供索引的网址加在下面，让百度收录，优化搜索。同时在发布文章时需要勾选<code>允许ping</code>，否则Wordpress不会通知相关的网站。</p>
+<p><strong>阅读</strong></p>
+<p>&ensp;&ensp;首页显示：设置首页显示的页面，可以指定需要显示在主页的页面。</p>
+<p>&ensp;&ensp;博客页面至多显示：一个页面中，最多显示几篇文章。如果文章的数量超出了此处的数值，则会分页显示。</p>
+<p><strong>讨论</strong></p>
+<p>&ensp;&ensp;默认文章设置：如果勾选<code>尝试通知文章中链接的博客</code>，则在发布文章时，如果文章中存在指向另一篇文章的超链接，则Wordpress会自动通知对方。不建议使用此项，容易产生垃圾信息。</p>
+<p>&ensp;&ensp;允许其他博客发送链接通知（pingback和trackback）到新文章：用于处理别人的通知，勾选表示允许发表评论，同时要以文章的设置为准，即文章设置为不允许则以文章设置为准。不建议勾选，将会占用资源。</p>
+<p>&ensp;&ensp;其他评论设置：评论规则，嵌套评论，分页显示评论等。</p>
+<p><strong>多媒体</strong></p>
+<p>&ensp;&ensp;Wordpress可以设置缩略图的尺寸，通过图片可以向用户传递信息。当上传图片时，Wordpress会自动生成不同尺寸的其他图片。这些图片默认以年月日进行分目录管理，保存在<code>WWW/wordpress/content/upload/</code>文件夹下。</p>
+<p><strong>固定链接</strong></p>
+<p>&ensp;&ensp;设置网址中显示的内容，即自定义URL结构。切换不同的链接结构，同一网页，网址会发生变化，这样是为了搜索引擎优化，搜索引擎不喜欢带有问号和层级特别深的网址。选择其他网址结构需要开启阿帕奇的rewrite功能。</p>
+<p>&ensp;&ensp;在自定义结构中：</p>
+<ul>
+<li><code>%post_id</code>代表内容编号</li>
+<li><code>%postname%</code>代表的是内容的名称</li>
+<li><code>%year%</code>代表的是内容发表的年份</li>
+<li><code>%monthnum</code>代表的是内容发表的月份</li>
+<li><code>%day%</code>代表的是内容发表的具体的日期</li>
+</ul>
+<p><strong>开启阿帕奇rewrite功能</strong></p>
+<p>&ensp;&ensp;打开其他选项，打开配置文件，选择<code>httpd-conf</code>文件，打开文件后使用查找功能，搜索<code>rewrite</code>，找到<code>LoadModule rewrite_module modules/mod_rewrite.so</code>去掉前面的<code>#</code>符号，开启功能。</p>
+<p><strong>分类目录和标签前缀</strong></p>
+<p>&ensp;&ensp;在固定链接中可以更改分类目录前缀和标签前缀。其中分类目录默认前缀为<code>category</code>，标签默认前缀为<code>tag</code>。</p>
+</li>
+</ul>
+<h4 id="13）用户注册网址和流程"><a href="#13）用户注册网址和流程" class="headerlink" title="13）用户注册网址和流程"></a>13）用户注册网址和流程</h4><p>&ensp;&ensp;打开网址<code>localhost/Wordpress/wp-login.php</code>，但需要提前勾选设置中的<code>成员资格——允许任何人注册</code>。进入注册界面后，根据提示填写英文用户名和电子邮箱，如果需要设置中文用户名需要对应设置，然后将会把注册的相关信息发送到邮箱，这是为了确保用户注册的邮箱是正确的。</p>
 
       
 
@@ -245,7 +376,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Wordpress</a>
         		</li>
       		
 		</ul>
@@ -301,7 +432,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/01/java%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/09/04/Wordpress%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -315,18 +446,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/08/02/%E5%8F%AF%E9%81%93%E4%BA%91%E7%BB%B4%E6%8A%A4%E6%97%A5%E5%BF%97/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/11/03/Git%E7%9A%84%E4%BD%BF%E7%94%A8/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          可道云维护
+          Git的使用
         
       </div>
     </a>
   
   
-    <a href="/2020/08/01/%E6%9C%80%E8%BF%91%E7%82%B9%E5%AF%B9%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">最近点问题</div>
+    <a href="/2020/09/01/%E6%80%80%E7%96%91%E8%AE%BA%EF%BC%88%E4%B8%80%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">怀疑论（一）</div>
       <i class="icon-circle-right"></i>
     </a>
   
