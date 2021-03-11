@@ -1,32 +1,300 @@
-extends includes/layout.pug
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>怀疑论（一） | Hexo</title><meta name="keywords" content="怀疑论"><meta name="author" content="HEtinto(yujianming)"><meta name="copyright" content="HEtinto(yujianming)"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="怀疑论">
+<meta property="og:type" content="article">
+<meta property="og:title" content="怀疑论（一）">
+<meta property="og:url" content="http://yoursite.com/2020/09/01/%E6%80%80%E7%96%91%E8%AE%BA%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="怀疑论">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true">
+<meta property="article:published_time" content="2020-09-01T14:39:04.000Z">
+<meta property="article:modified_time" content="2020-09-08T13:39:44.111Z">
+<meta property="article:author" content="HEtinto(yujianming)">
+<meta property="article:tag" content="怀疑论">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yoursite.com/2020/09/01/%E6%80%80%E7%96%91%E8%AE%BA%EF%BC%88%E4%B8%80%EF%BC%89/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-09-08 21:39:44'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-block content
-  #post
-    if top_img === false
-      include includes/header/post-info.pug
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-    article#article-container.post-content!=page.content
-    include includes/post/post-copyright.pug
-    .tag_share
-      if (theme.post_meta.post.tags)
-        .post-meta__tag-list
-          each item, index in page.tags.data
-            a(href=url_for(item.path)).post-meta__tags #[=item.name]
-      include includes/third-party/share/index.pug
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-    if theme.reward.enable
-      !=partial('includes/post/reward', {}, {cache: true})
-
-    //- ad
-    if theme.ad && theme.ad.post
-      .ads-wrap!=theme.ad.post
-
-    if theme.post_pagination
-      include includes/pagination.pug
-    if theme.related_post && theme.related_post.enable
-      != related_posts(page,site.posts)
-
-    if page.comments !== false && theme.comments && theme.comments.use
-      - var commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache: true})
-      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">17</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">12</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">怀疑论（一）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-09-01T14:39:04.000Z" title="Created 2020-09-01 22:39:04">2020-09-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-09-08T13:39:44.111Z" title="Updated 2020-09-08 21:39:44">2020-09-08</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="怀疑论（一）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="怀疑论"><a href="#怀疑论" class="headerlink" title="怀疑论"></a>怀疑论</h1><span id="more"></span> 
+<h2 id="问题引入"><a href="#问题引入" class="headerlink" title="问题引入"></a>问题引入</h2><ul>
+<li>为什么哲学的怀疑论是没有区分真假答案的？</li>
+<li>难道我不【怀疑】这一点吗？</li>
+<li>这是古典怀疑论问题的核心。</li>
+<li>主要原因是：古典怀疑论的焦点在于【信念】，不是【知识】。</li>
+<li>在希腊文中<code>doxa</code>与<code>episteme</code>有根本不同。</li>
+</ul>
+<h3 id="1-学院派怀疑论"><a href="#1-学院派怀疑论" class="headerlink" title="1.学院派怀疑论"></a>1.学院派怀疑论</h3><ul>
+<li>来自柏拉图</li>
+<li>我们不能知道任何命题为真。</li>
+<li>笛卡尔的怀疑也是这种模式。</li>
+<li>不排除可能世界，也无法区分出哪个世界是真实世界。</li>
+<li>我们没有证据！</li>
+</ul>
+<h4 id="教条主义的怀疑论困境"><a href="#教条主义的怀疑论困境" class="headerlink" title="教条主义的怀疑论困境"></a>教条主义的怀疑论困境</h4><ul>
+<li><p>学院派是教条主义者吗？</p>
+</li>
+<li><p>他们的教条是【理性的力量】。</p>
+</li>
+<li><p>可以没有理性吗？笛卡尔说：不！</p>
+<p><em>理性：是一种十分真实的体验，是一种行动，不能被描述，经常体现再数学解题中，我们通过逻辑思考得出结果的过程符合理性。</em></p>
+</li>
+<li><p>笛卡尔怀疑论最大的特色是，理性最终去除了怀疑，建构了自我、上帝与世界。</p>
+</li>
+<li><p>对于皮勒怀疑论者而言，理性的态度，就是教条；那为什么态度不是教条呢？</p>
+</li>
+</ul>
+<h3 id="这个【困境】是怀疑论的核心"><a href="#这个【困境】是怀疑论的核心" class="headerlink" title="这个【困境】是怀疑论的核心"></a>这个【困境】是怀疑论的核心</h3><ul>
+<li>这个困境使得怀疑论转向伦理学的态度。</li>
+<li>这个困境使得怀疑论强调信念与常识。</li>
+<li>这个困境使得皮勒怀疑论者，萨克督斯提出一套有关什么是怀疑论的论述。</li>
+<li>强调信念与常识的观点，往往由于与相对主义者重叠的缘故，导致怀疑论者与理性主义者之间的争议。</li>
+</ul>
+<h3 id="持续性的调查"><a href="#持续性的调查" class="headerlink" title="持续性的调查"></a>持续性的调查</h3><ul>
+<li>【持续性的调查】的意义，并不是怀疑，而是以语言与事物之间的距离，指出哲学调查的可能性是没有终止的。</li>
+<li>再先稣哲学家中，不是爱奥尼学派的哲学家表现得很【教条】，就是爱菲斯学派（赫拉克利图）与伊利亚学派（色诺芬尼与巴门尼德），表现得很【形而上学】。</li>
+<li>古典怀疑论得起源，就是形上学得提升。</li>
+</ul>
+<h2 id="古典怀疑论得起源：色诺芬尼"><a href="#古典怀疑论得起源：色诺芬尼" class="headerlink" title="古典怀疑论得起源：色诺芬尼"></a>古典怀疑论得起源：色诺芬尼</h2><h3 id="The-origin-of-skepticism-likely-comes-from-Xenophanes’-Fragments-B34"><a href="#The-origin-of-skepticism-likely-comes-from-Xenophanes’-Fragments-B34" class="headerlink" title="The origin of skepticism likely comes  from Xenophanes’ Fragments B34:"></a>The origin of skepticism likely comes  from Xenophanes’ Fragments B34:</h3><ul>
+<li>But as for certain truth, no man has known it,</li>
+<li>Nor will he know it; neither of the gods.</li>
+<li>And even if by chance he were to utter</li>
+<li>The perfect truth; he would himself not know it;</li>
+<li>For all is but a woven web of guesses.</li>
+</ul>
+<h3 id="色诺芬尼的话有什么重要意义"><a href="#色诺芬尼的话有什么重要意义" class="headerlink" title="色诺芬尼的话有什么重要意义"></a>色诺芬尼的话有什么重要意义</h3><ul>
+<li><p>色诺芬尼的哲学以一神论见称，是巴门尼德哲学的前驱，也是存有学的开创者。</p>
+</li>
+<li><p>他以相对主义的观点，认为人所认知的神，必然与他生活的环境息息相关，而不会是一个超越一切的神。</p>
+</li>
+<li><p>他因而认为，作为有限的存有者，无法知道无限的神为何，因而也不能知道任何有关存在的本质意义。</p>
+<p><em>我们可以描述这个世界，却无法知道这个世界的本质</em></p>
+</li>
+<li><p>最重要的是，我们所使用的语言，并不能说出世界的本质，甚至不能说我们所作的每一件事的所有意义。</p>
+</li>
+<li><p>色诺芬的观念，在于</p>
+<p>1.颠覆我们惯有的信念。</p>
+<p>2.取消我们因为信念所作的判断。</p>
+<p>3.否定语言与世界之间的连结关系。</p>
+<p>4.回拒我们有任何判断真理的标准。</p>
+</li>
+<li><p>这四点是希腊化哲学中（例如斯多葛学派）的真知判断标准。</p>
+</li>
+</ul>
+<h3 id="色诺芬尼的怀疑论基础-（一）"><a href="#色诺芬尼的怀疑论基础-（一）" class="headerlink" title="色诺芬尼的怀疑论基础 （一）"></a>色诺芬尼的怀疑论基础 （一）</h3><p>1.表象与实在的区别。 </p>
+<p>2.信念与知识的区别。 </p>
+<p>3.有、无证据的区别。 </p>
+<p>4.整体而言，在先稣哲学中，真理或知识来自于人的有限性之外。 </p>
+<p>5.人所能掌握的，只是表象、信念与没有充分证据的事物。 </p>
+<h3 id="色诺芬尼的怀疑论基础（二）"><a href="#色诺芬尼的怀疑论基础（二）" class="headerlink" title="色诺芬尼的怀疑论基础（二）"></a>色诺芬尼的怀疑论基础（二）</h3><ul>
+<li>色诺芬尼在怀疑论的发展中，最著名的是反对【拟人化的】（authropomorphic）神学概念。</li>
+<li>这种概念说明，人因为文化上以及环境的因素必然会受到文化的决定。</li>
+<li>文化决定论却常常在提到普遍的理性原则中受到忽略。</li>
+<li>对于神的描述是最明显的。</li>
+<li>他基本上认为，人在作判断的时候，都必然受到主观因素的影响，但是却特别喜欢以客观真理的方式说服他人。</li>
+<li>这种以客观、理性与普遍真理方式说服他人的概念中，神学概念是最明显的。</li>
+<li>但是，B34中指出，人无能掌握这种概念的真理。 </li>
+<li>对于怀疑论的立场而言，色诺芬尼的观点具有决定性的影响。</li>
+<li>他甚至认为，即使某人针对某事物说对了，也不代表这个人知道真理是什么，因为他没有能力知道绝对的真实，却只有信念。</li>
+<li>信念是我们作为有限存有者所仅有的判断依据。 </li>
+</ul>
+<h2 id="苏格拉底怀疑论"><a href="#苏格拉底怀疑论" class="headerlink" title="苏格拉底怀疑论"></a>苏格拉底怀疑论</h2><h3 id="一个述而不作的哲学家，说出什么"><a href="#一个述而不作的哲学家，说出什么" class="headerlink" title="一个述而不作的哲学家，说出什么"></a>一个述而不作的哲学家，说出什么</h3><ul>
+<li><p>苏格拉底最著名的两句话： </p>
+<p><strong>“An unexamined life is not worth living !”</strong></p>
+<p>一个未经检验的生命是不值得活的！</p>
+<p><strong>“The only thing I know is that I do not know anything !”</strong></p>
+<p>我唯一知道的东西就是我什么也不知道！</p>
+</li>
+</ul>
+<h3 id="诘问法"><a href="#诘问法" class="headerlink" title="诘问法"></a>诘问法</h3><ul>
+<li>苏格拉底用一种极为特殊的方式进行哲学的思考与讨论。我们今天称这种方式为诘问法，是一种用对话的方式，质疑对方所讲的内容。</li>
+<li>透过分析的方法，<strong>指出内容中的谬误，加以驳倒，让对方承认错误</strong>。我们今天称苏格拉底为哲学家的主要原因，就是他在对话中所引用的方法。</li>
+<li>事实上，这是一种怀疑论。 </li>
+</ul>
+<h3 id="SKEPSIS"><a href="#SKEPSIS" class="headerlink" title="SKEPSIS"></a>SKEPSIS</h3><ul>
+<li>Skepsis在希腊文中的原意是持续调查，而这个定义在哲学讨论中，转变成为一种学术精神；展现这种精神最有名的人就是苏格拉底。</li>
+<li>苏格拉底不但以对话的方式，持续调查真理，还认为若人生不进行持续的调查，则没有获得美丽人生的可能性。 </li>
+<li><strong>这是知识与伦理学结合的起点</strong>。 </li>
+</ul>
+<h3 id="正面的人生哲学"><a href="#正面的人生哲学" class="headerlink" title="正面的人生哲学"></a>正面的人生哲学</h3><ul>
+<li><p>苏格拉底的理由是，我们的信念有可能出错。若不能对这些信念展开调查的话，那么我们等同于接收虚假的人生。所以，只有一个受检验的生命，才是一个值得活的生命。一旦我认识这一点，那么我必然因为避免错误，展开真理的检验，并因而获得一个完全不同的生命。 </p>
+</li>
+<li><p>从这里，我们看得出来，在苏格拉底的哲学中，<strong>怀疑论反而变成一种极具正面意义的人生哲学</strong>。</p>
+</li>
+<li><p>这一点，正好就是怀疑论的起点与终点。人生就是不断地求知，求知才能获得心灵的宁静，不必担心被骗。</p>
+<p><em>真正要追求人生的美满，可以遵循怀疑论的方法；先承认自己是有限的，然后再用一种更积极的态度来追求知识是可能的。</em></p>
+</li>
+</ul>
+<h3 id="错误是怎么来的？"><a href="#错误是怎么来的？" class="headerlink" title="错误是怎么来的？"></a>错误是怎么来的？</h3><ul>
+<li>因此，未经调查的信念以及因它们而产生的行动，就是错误。 </li>
+<li>往往是这些错误涉及好坏对错的判断，让我们面对观念以及行动上的冲突。</li>
+<li>同时，为了捍卫自己的立场，意见不同的人会各持己见，提出论证、做法以及经验，证明自己是对的。 </li>
+<li><strong>这些不同的想法需要被检验</strong>。 </li>
+</ul>
+<h3 id="持续调查的理性"><a href="#持续调查的理性" class="headerlink" title="持续调查的理性"></a>持续调查的理性</h3><ul>
+<li>不停止检验的结果，极有可能是更多的冲突。 </li>
+<li>结果就是苏格拉底的观点：<strong>理性就是否定每一个问题所产生的判断，然后持续调查</strong>。</li>
+<li>苏格拉底的怀疑论精神就是持续针对所有的问题找寻真理，同时否定所有人提出的判断。 </li>
+</ul>
+<h3 id="建构苏格拉底怀疑论为四点"><a href="#建构苏格拉底怀疑论为四点" class="headerlink" title="建构苏格拉底怀疑论为四点"></a>建构苏格拉底怀疑论为四点</h3><h4 id="1-一个未经检验的生命是不值得活的。"><a href="#1-一个未经检验的生命是不值得活的。" class="headerlink" title="1.一个未经检验的生命是不值得活的。"></a>1.一个未经检验的生命是不值得活的。</h4><ul>
+<li>这句话具有两方面的意义。一是知识论，二是伦理学。 </li>
+<li>如果我过一个日复一日的生活，尸位素餐，那么我是不是罔对生命？可是要怎么做才能够拥有一个【值得的】生命呢？答案就是以批判的态度进行检验的同时，也检验他人的判断。</li>
+</ul>
+<h4 id="2-原则性的规范"><a href="#2-原则性的规范" class="headerlink" title="2.原则性的规范"></a><strong>2.原则性的规范</strong></h4><ul>
+<li><strong>客观规则存在</strong>，而且适用于所有的人，不受时空的限制。 </li>
+<li>若是想要过着幸福的生活，就必须检验某些人的不义、自我欺骗，以及错误的目标。</li>
+<li>总之这个原则就是【否定错误】。</li>
+</ul>
+<h4 id="3-真理在每一个人心中"><a href="#3-真理在每一个人心中" class="headerlink" title="3.真理在每一个人心中"></a><strong>3.真理在每一个人心中</strong></h4><ul>
+<li>不需要求神问卜，不必依靠传统，更不是约定俗成的。</li>
+<li>每一个人心中都有一把公正的尺，可以告诉自己，应该说什么，与应该做什么。 </li>
+<li>因此，没有人可以教导其他人这些规则。因为它们都是自我批判检验下的结果。</li>
+</ul>
+<h3 id="虽然没有人可以教……"><a href="#虽然没有人可以教……" class="headerlink" title="虽然没有人可以教……"></a>虽然没有人可以教……</h3><h4 id="4-虽然没有人可以教，但宣称是教师的哲学家们，可以透过发问的方式，让对话人知道什么是对的思想与对的行为"><a href="#4-虽然没有人可以教，但宣称是教师的哲学家们，可以透过发问的方式，让对话人知道什么是对的思想与对的行为" class="headerlink" title="4.虽然没有人可以教，但宣称是教师的哲学家们，可以透过发问的方式，让对话人知道什么是对的思想与对的行为"></a>4.虽然没有人可以教，但宣称是教师的哲学家们，可以透过发问的方式，让对话人知道什么是对的思想与对的行为</h4><ul>
+<li>以诘问的方式所展开的对话，逼迫人展开批判与检验。</li>
+<li>做教师的人，一开始可以基于过往的经验对学生加以指导，但最终对于真理的掌握，必然来自于个人。</li>
+</ul>
+<h3 id="苏格拉底的方法，就是否定"><a href="#苏格拉底的方法，就是否定" class="headerlink" title="苏格拉底的方法，就是否定"></a>苏格拉底的方法，就是<strong>否定</strong></h3><ul>
+<li>否定这个观念有什么稀奇，足以成为哲学的方法呢？</li>
+<li>原因就是，否定的方法会让人受到刺激，面对拒绝，以及遭遇批判。</li>
+<li>我们试想，如果我说出来的话，永远受到褒奖、吹捧、没有人会否定的话，那么久而久之，我必然感到自满，肯定自己所说的一切。</li>
+</ul>
+<h3 id="《辩护篇》"><a href="#《辩护篇》" class="headerlink" title="《辩护篇》"></a>《辩护篇》</h3><ul>
+<li>苏格拉底就清楚说过，许多人对他的直言不讳感到不满，甚至想置他于死地。但是，苏格拉底乐于当一个像牛蝇一般的人，蜇得人痛苦不堪，又乐此不疲。</li>
+<li>苏格拉底坚持说真话，死亦不足惧。这表示在说话时，<strong>只要坚持真理，就不怕得罪人</strong>。那么如何知道真理呢？答案是。我们并不知道真理是什么，但我们却知道真理不是什么。</li>
+</ul>
+<h3 id="哲学就是除错的工作"><a href="#哲学就是除错的工作" class="headerlink" title="哲学就是除错的工作"></a>哲学就是除错的工作</h3><ul>
+<li><p>为了要达到这个目的，我们也要刻意地对一些听起来言之成理的话，进行深刻的检验，务必以找出错误为主。 </p>
+</li>
+<li><p><strong>哲学家的唯一工作，就是努力求错，加以排除</strong>。</p>
+</li>
+<li><p>事实上，我们看得很清楚，这正式批判理性者的态度。</p>
+<p><em>批判理性者的态度就是认真、认错的态度。苏格拉底的观点是一种理性的立场，理性是行动，不是观点，行动不是用语言能够描述和定义的，不能认为苏格拉底的态度是一种立场，如果这样认为就可能陷入“一切都是可以被怀疑的，那么这个论点本身也就是可以被怀疑的”之中，认为生命要不断地持续检验，检验的过程是行动的。</em></p>
+<p><em>“做痛苦的苏格拉底，还是做快乐的猪？”。人生的选择，没有道德上的压力，也没有道德上的义务。我们之所以倡导哲学者，是因为我们想告诉你，在你的人生之中，要有一点哲学的要素。</em></p>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">HEtinto(yujianming)</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://yoursite.com/2020/09/01/%E6%80%80%E7%96%91%E8%AE%BA%EF%BC%88%E4%B8%80%EF%BC%89/">http://yoursite.com/2020/09/01/%E6%80%80%E7%96%91%E8%AE%BA%EF%BC%88%E4%B8%80%EF%BC%89/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%80%80%E7%96%91%E8%AE%BA/">怀疑论</a></div><div class="post_share"><div class="social-share" data-image="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/09/04/Wordpress%E4%BD%BF%E7%94%A8/"><img class="prev-cover" src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">Wordpress安装与使用</div></div></a></div><div class="next-post pull-right"><a href="/2020/08/20/HTML%E5%AD%A6%E4%B9%A0/"><img class="next-cover" src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">HTML学习笔记</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">HEtinto(yujianming)</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">17</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">12</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%80%E7%96%91%E8%AE%BA"><span class="toc-number">1.</span> <span class="toc-text">怀疑论</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%BC%95%E5%85%A5"><span class="toc-number">1.1.</span> <span class="toc-text">问题引入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AD%A6%E9%99%A2%E6%B4%BE%E6%80%80%E7%96%91%E8%AE%BA"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.学院派怀疑论</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%99%E6%9D%A1%E4%B8%BB%E4%B9%89%E7%9A%84%E6%80%80%E7%96%91%E8%AE%BA%E5%9B%B0%E5%A2%83"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">教条主义的怀疑论困境</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%99%E4%B8%AA%E3%80%90%E5%9B%B0%E5%A2%83%E3%80%91%E6%98%AF%E6%80%80%E7%96%91%E8%AE%BA%E7%9A%84%E6%A0%B8%E5%BF%83"><span class="toc-number">1.1.2.</span> <span class="toc-text">这个【困境】是怀疑论的核心</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%81%E7%BB%AD%E6%80%A7%E7%9A%84%E8%B0%83%E6%9F%A5"><span class="toc-number">1.1.3.</span> <span class="toc-text">持续性的调查</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%A4%E5%85%B8%E6%80%80%E7%96%91%E8%AE%BA%E5%BE%97%E8%B5%B7%E6%BA%90%EF%BC%9A%E8%89%B2%E8%AF%BA%E8%8A%AC%E5%B0%BC"><span class="toc-number">1.2.</span> <span class="toc-text">古典怀疑论得起源：色诺芬尼</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#The-origin-of-skepticism-likely-comes-from-Xenophanes%E2%80%99-Fragments-B34"><span class="toc-number">1.2.1.</span> <span class="toc-text">The origin of skepticism likely comes  from Xenophanes’ Fragments B34:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%89%B2%E8%AF%BA%E8%8A%AC%E5%B0%BC%E7%9A%84%E8%AF%9D%E6%9C%89%E4%BB%80%E4%B9%88%E9%87%8D%E8%A6%81%E6%84%8F%E4%B9%89"><span class="toc-number">1.2.2.</span> <span class="toc-text">色诺芬尼的话有什么重要意义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%89%B2%E8%AF%BA%E8%8A%AC%E5%B0%BC%E7%9A%84%E6%80%80%E7%96%91%E8%AE%BA%E5%9F%BA%E7%A1%80-%EF%BC%88%E4%B8%80%EF%BC%89"><span class="toc-number">1.2.3.</span> <span class="toc-text">色诺芬尼的怀疑论基础 （一）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%89%B2%E8%AF%BA%E8%8A%AC%E5%B0%BC%E7%9A%84%E6%80%80%E7%96%91%E8%AE%BA%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89"><span class="toc-number">1.2.4.</span> <span class="toc-text">色诺芬尼的怀疑论基础（二）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8B%8F%E6%A0%BC%E6%8B%89%E5%BA%95%E6%80%80%E7%96%91%E8%AE%BA"><span class="toc-number">1.3.</span> <span class="toc-text">苏格拉底怀疑论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E8%BF%B0%E8%80%8C%E4%B8%8D%E4%BD%9C%E7%9A%84%E5%93%B2%E5%AD%A6%E5%AE%B6%EF%BC%8C%E8%AF%B4%E5%87%BA%E4%BB%80%E4%B9%88"><span class="toc-number">1.3.1.</span> <span class="toc-text">一个述而不作的哲学家，说出什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%98%E9%97%AE%E6%B3%95"><span class="toc-number">1.3.2.</span> <span class="toc-text">诘问法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SKEPSIS"><span class="toc-number">1.3.3.</span> <span class="toc-text">SKEPSIS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E9%9D%A2%E7%9A%84%E4%BA%BA%E7%94%9F%E5%93%B2%E5%AD%A6"><span class="toc-number">1.3.4.</span> <span class="toc-text">正面的人生哲学</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%99%E8%AF%AF%E6%98%AF%E6%80%8E%E4%B9%88%E6%9D%A5%E7%9A%84%EF%BC%9F"><span class="toc-number">1.3.5.</span> <span class="toc-text">错误是怎么来的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%81%E7%BB%AD%E8%B0%83%E6%9F%A5%E7%9A%84%E7%90%86%E6%80%A7"><span class="toc-number">1.3.6.</span> <span class="toc-text">持续调查的理性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BB%BA%E6%9E%84%E8%8B%8F%E6%A0%BC%E6%8B%89%E5%BA%95%E6%80%80%E7%96%91%E8%AE%BA%E4%B8%BA%E5%9B%9B%E7%82%B9"><span class="toc-number">1.3.7.</span> <span class="toc-text">建构苏格拉底怀疑论为四点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%B8%80%E4%B8%AA%E6%9C%AA%E7%BB%8F%E6%A3%80%E9%AA%8C%E7%9A%84%E7%94%9F%E5%91%BD%E6%98%AF%E4%B8%8D%E5%80%BC%E5%BE%97%E6%B4%BB%E7%9A%84%E3%80%82"><span class="toc-number">1.3.7.1.</span> <span class="toc-text">1.一个未经检验的生命是不值得活的。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%8E%9F%E5%88%99%E6%80%A7%E7%9A%84%E8%A7%84%E8%8C%83"><span class="toc-number">1.3.7.2.</span> <span class="toc-text">2.原则性的规范</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E7%9C%9F%E7%90%86%E5%9C%A8%E6%AF%8F%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%BF%83%E4%B8%AD"><span class="toc-number">1.3.7.3.</span> <span class="toc-text">3.真理在每一个人心中</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%BD%E7%84%B6%E6%B2%A1%E6%9C%89%E4%BA%BA%E5%8F%AF%E4%BB%A5%E6%95%99%E2%80%A6%E2%80%A6"><span class="toc-number">1.3.8.</span> <span class="toc-text">虽然没有人可以教……</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E8%99%BD%E7%84%B6%E6%B2%A1%E6%9C%89%E4%BA%BA%E5%8F%AF%E4%BB%A5%E6%95%99%EF%BC%8C%E4%BD%86%E5%AE%A3%E7%A7%B0%E6%98%AF%E6%95%99%E5%B8%88%E7%9A%84%E5%93%B2%E5%AD%A6%E5%AE%B6%E4%BB%AC%EF%BC%8C%E5%8F%AF%E4%BB%A5%E9%80%8F%E8%BF%87%E5%8F%91%E9%97%AE%E7%9A%84%E6%96%B9%E5%BC%8F%EF%BC%8C%E8%AE%A9%E5%AF%B9%E8%AF%9D%E4%BA%BA%E7%9F%A5%E9%81%93%E4%BB%80%E4%B9%88%E6%98%AF%E5%AF%B9%E7%9A%84%E6%80%9D%E6%83%B3%E4%B8%8E%E5%AF%B9%E7%9A%84%E8%A1%8C%E4%B8%BA"><span class="toc-number">1.3.8.1.</span> <span class="toc-text">4.虽然没有人可以教，但宣称是教师的哲学家们，可以透过发问的方式，让对话人知道什么是对的思想与对的行为</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8B%8F%E6%A0%BC%E6%8B%89%E5%BA%95%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%8C%E5%B0%B1%E6%98%AF%E5%90%A6%E5%AE%9A"><span class="toc-number">1.3.9.</span> <span class="toc-text">苏格拉底的方法，就是否定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%8A%E8%BE%A9%E6%8A%A4%E7%AF%87%E3%80%8B"><span class="toc-number">1.3.10.</span> <span class="toc-text">《辩护篇》</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%93%B2%E5%AD%A6%E5%B0%B1%E6%98%AF%E9%99%A4%E9%94%99%E7%9A%84%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.3.11.</span> <span class="toc-text">哲学就是除错的工作</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/11/04/k8s%E4%BD%BF%E7%94%A8/" title="k8s学习"><img src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="k8s学习"/></a><div class="content"><a class="title" href="/2020/11/04/k8s%E4%BD%BF%E7%94%A8/" title="k8s学习">k8s学习</a><time datetime="2020-11-04T12:20:00.000Z" title="Created 2020-11-04 20:20:00">2020-11-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/03/Git%E7%9A%84%E4%BD%BF%E7%94%A8/" title="No title"><img src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2020/11/03/Git%E7%9A%84%E4%BD%BF%E7%94%A8/" title="No title">No title</a><time datetime="2020-11-03T14:56:51.901Z" title="Created 2020-11-03 22:56:51">2020-11-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/04/Wordpress%E4%BD%BF%E7%94%A8/" title="Wordpress安装与使用"><img src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Wordpress安装与使用"/></a><div class="content"><a class="title" href="/2020/09/04/Wordpress%E4%BD%BF%E7%94%A8/" title="Wordpress安装与使用">Wordpress安装与使用</a><time datetime="2020-09-04T00:22:00.000Z" title="Created 2020-09-04 08:22:00">2020-09-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/01/%E6%80%80%E7%96%91%E8%AE%BA%EF%BC%88%E4%B8%80%EF%BC%89/" title="怀疑论（一）"><img src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="怀疑论（一）"/></a><div class="content"><a class="title" href="/2020/09/01/%E6%80%80%E7%96%91%E8%AE%BA%EF%BC%88%E4%B8%80%EF%BC%89/" title="怀疑论（一）">怀疑论（一）</a><time datetime="2020-09-01T14:39:04.000Z" title="Created 2020-09-01 22:39:04">2020-09-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/08/20/HTML%E5%AD%A6%E4%B9%A0/" title="HTML学习笔记"><img src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HTML学习笔记"/></a><div class="content"><a class="title" href="/2020/08/20/HTML%E5%AD%A6%E4%B9%A0/" title="HTML学习笔记">HTML学习笔记</a><time datetime="2020-08-20T04:20:00.000Z" title="Created 2020-08-20 12:20:00">2020-08-20</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By HEtinto(yujianming)</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

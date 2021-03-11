@@ -1,32 +1,306 @@
-extends includes/layout.pug
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wordpress安装与使用 | Hexo</title><meta name="keywords" content="Wordpress"><meta name="author" content="HEtinto(yujianming)"><meta name="copyright" content="HEtinto(yujianming)"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Wordpress安装与使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Wordpress安装与使用">
+<meta property="og:url" content="http://yoursite.com/2020/09/04/Wordpress%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Wordpress安装与使用">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true">
+<meta property="article:published_time" content="2020-09-04T00:22:00.000Z">
+<meta property="article:modified_time" content="2020-09-04T00:23:21.487Z">
+<meta property="article:author" content="HEtinto(yujianming)">
+<meta property="article:tag" content="Wordpress">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yoursite.com/2020/09/04/Wordpress%E4%BD%BF%E7%94%A8/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-09-04 08:23:21'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-block content
-  #post
-    if top_img === false
-      include includes/header/post-info.pug
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-    article#article-container.post-content!=page.content
-    include includes/post/post-copyright.pug
-    .tag_share
-      if (theme.post_meta.post.tags)
-        .post-meta__tag-list
-          each item, index in page.tags.data
-            a(href=url_for(item.path)).post-meta__tags #[=item.name]
-      include includes/third-party/share/index.pug
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-    if theme.reward.enable
-      !=partial('includes/post/reward', {}, {cache: true})
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">17</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">12</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Wordpress安装与使用</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-09-04T00:22:00.000Z" title="Created 2020-09-04 08:22:00">2020-09-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-09-04T00:23:21.487Z" title="Updated 2020-09-04 08:23:21">2020-09-04</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Wordpress安装与使用"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Wordpress安装与使用"><a href="#Wordpress安装与使用" class="headerlink" title="Wordpress安装与使用"></a>Wordpress安装与使用</h1><span id="more"></span> 
 
-    //- ad
-    if theme.ad && theme.ad.post
-      .ads-wrap!=theme.ad.post
 
-    if theme.post_pagination
-      include includes/pagination.pug
-    if theme.related_post && theme.related_post.enable
-      != related_posts(page,site.posts)
 
-    if page.comments !== false && theme.comments && theme.comments.use
-      - var commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache: true})
-      
+<h2 id="一、在官网下载wordpress"><a href="#一、在官网下载wordpress" class="headerlink" title="一、在官网下载wordpress"></a>一、在官网下载wordpress</h2><p>&ensp;&ensp;每个版本的wordpress在使用上可能存在一些差异，可以使用指定的版本进行学习。解压下载的压缩包文件，并将解压好的wordpress文件夹放到网站根目录（www/）。 </p>
+<h2 id="二、访问Wordpress中的index-php文件"><a href="#二、访问Wordpress中的index-php文件" class="headerlink" title="二、访问Wordpress中的index.php文件"></a>二、访问Wordpress中的index.php文件</h2><p>&ensp;&ensp;使用<code>localhost/wordpress文件夹/</code>即可访问<code>www/</code>目录下的<code>Wordpress</code>文件夹的默认主页<code>index.php</code>。然后按照提示设置： </p>
+<ul>
+<li><p>填写mysql的用户名和密码，默认为root；</p>
+</li>
+<li><p>在数据库名称一栏中填写自己创建的数据库名称；</p>
+</li>
+<li><p>表前缀不用修改，默认为：<code>wp_</code>；</p>
+</li>
+<li><p>数据库主机不用修改，默认为：<code>localhost</code>；</p>
+</li>
+<li><p>配置好后点击进行安装；</p>
+<h3 id="下一步填写需要的信息"><a href="#下一步填写需要的信息" class="headerlink" title="下一步填写需要的信息"></a>下一步填写需要的信息</h3></li>
+<li><p>站点名称：填写自己网站的名称；</p>
+</li>
+<li><p>用户名：网站管理员的用户名，不能包含中文；</p>
+</li>
+<li><p>电子邮件：填写管理员的邮箱地址，Wordpress将会把通知发到管理员邮箱；</p>
+</li>
+</ul>
+<h2 id="三、登陆Wordpress"><a href="#三、登陆Wordpress" class="headerlink" title="三、登陆Wordpress"></a>三、登陆Wordpress</h2><h3 id="1、Wordpress下负责登陆和验证的文件"><a href="#1、Wordpress下负责登陆和验证的文件" class="headerlink" title="1、Wordpress下负责登陆和验证的文件"></a>1、Wordpress下负责登陆和验证的文件</h3><p>&ensp;&ensp;<code>wp-login.php</code>    文件负责验证和登陆；我们只需要在浏览器地址栏中访问<code>wp-login.php</code>文件即可访问登陆界面。 </p>
+<h3 id="2、登陆成功后跳转到管理员后台"><a href="#2、登陆成功后跳转到管理员后台" class="headerlink" title="2、登陆成功后跳转到管理员后台"></a>2、登陆成功后跳转到管理员后台</h3><p>&ensp;&ensp;鼠标放到站点名称上会弹出查看站点的按钮，点击后将显示网站前台，在点击时按住<code>ctrl</code>键可以打开一个新的选项卡。 </p>
+<h3 id="3、Wordpress后台管理"><a href="#3、Wordpress后台管理" class="headerlink" title="3、Wordpress后台管理"></a>3、Wordpress后台管理</h3><ul>
+<li><p>插件操作</p>
+<p>&ensp;&ensp;插件可以给Wordpress增加全新的功能；同时，插件也可以修改Wordpress原有的功能；插件也可以删除Wordpress站点原有的功能。</p>
+<h4 id="1-安装插件"><a href="#1-安装插件" class="headerlink" title="1.安装插件"></a>1.安装插件</h4><p>&ensp;&ensp;点击<code>安装插件</code>按钮，在接下来的界面中可以选择需要的插件进行安装；同时也提供搜索插件的功能。</p>
+<ul>
+<li><p>点击<code>现在安装</code>即可安装插件</p>
+</li>
+<li><p>插件安装失败</p>
+<p>&ensp;&ensp;在线安装时会提供插件的下载地址，我们可以通过下载地址下载插件。插件下载完成后，在<code>插件</code>页面点击上传插件即可；同时也可以在互联网上去下载其他非官方插件。同时上传的插件必须时指定的压缩格式，一般为zip格式。</p>
+<p>&ensp;&ensp;安装的插件会保存在<code>/Wordpress文件夹/wp-content/plugins/</code>目录下。所以我们可以直接将插件解压，手动放到插件所在目录。</p>
+</li>
+</ul>
+<h4 id="2-管理已经安装的插件"><a href="#2-管理已经安装的插件" class="headerlink" title="2.管理已经安装的插件"></a>2.管理已经安装的插件</h4><p>&ensp;&ensp;在<code>已安装的插件</code>中可以管理插件。在需要启用的插件下有<code>启用</code>按钮，点击该按钮即可启用，对于已经开启的插件可以点击<code>停用</code>按钮将其停用。</p>
+<h3 id="3-编辑插件"><a href="#3-编辑插件" class="headerlink" title="3.编辑插件"></a>3.编辑插件</h3><p>&ensp;&ensp;点击<code>编辑</code>按钮可以编辑插件的源代码，但是这个功能并不常用。同时，在<code>已安装的插件</code>中也可以对插件进行相应的编辑。 </p>
+<h4 id="4-解决后台加载过慢的问题"><a href="#4-解决后台加载过慢的问题" class="headerlink" title="4.解决后台加载过慢的问题"></a>4.解决后台加载过慢的问题</h4><h5 id="1）无法正常加载用户头像的问题"><a href="#1）无法正常加载用户头像的问题" class="headerlink" title="1）无法正常加载用户头像的问题"></a>1）无法正常加载用户头像的问题</h5><p>&ensp;&ensp;解决办法，直接安装一个插件——<code>cn-avatar</code>，然后启用该插件即可。</p>
+<h5 id="2）谷歌字体的原因"><a href="#2）谷歌字体的原因" class="headerlink" title="2）谷歌字体的原因"></a>2）谷歌字体的原因</h5><p>&ensp;&ensp;因为谷歌字体由谷歌服务提供，在国内的无法响应；可以安装<code>disable google fonts</code>插件，然后启用该插件即可。</p>
+</li>
+<li><p>文章 </p>
+<p>&ensp;&ensp;网站的内容建设十分重要，不论你想做什么样的网站，一般情况下，至少包括两种类型的内容，一种是数量很多的主要内容，另一种是数量少的其他内容。</p>
+<p>&ensp;&ensp;其中<code>文章</code>就是一种内容类型，用于发布网站的主要内容（数量多），而<code>页面</code>用于发表其他内容，内容分类等。</p>
+<h4 id="1-分类目录"><a href="#1-分类目录" class="headerlink" title="1.分类目录"></a>1.分类目录</h4><p>&ensp;&ensp;通过分类将内容进行分类和归纳整理，提升用户体验。分类目录就是将内容分到具体的类别。没有必要对数量比较少的内容进行分类，而<code>页面</code>就是用于发布其他数量比较少的内容，所以<code>页面</code>下面没有<code>分类目录</code>。</p>
+<h4 id="2-标签"><a href="#2-标签" class="headerlink" title="2.标签"></a>2.标签</h4><p>&ensp;&ensp;<code>标签</code>可以理解为关键字，我们将具有同一个属性的东西用标签来标记，用户可以通过标签快速寻找到带有同一属性的内容。</p>
+<h4 id="3-规划网站"><a href="#3-规划网站" class="headerlink" title="3.规划网站"></a>3.规划网站</h4><p>&ensp;&ensp;首先，你要区分出，你的网站的主要内容和其他内容。一旦区分出主要内容和其他内容，你就知道应该在文章还是在页面处发布内容了。其次，你对主要内容进行分门别类，划分细分类目录。再次，才是发布内容。不需要事先划分标签，标签是一种非常灵活的，对内容进行归纳整理的方式。 </p>
+<p>&ensp;&ensp;假设需要使用Wordpress做一个新闻网站：</p>
+<h5 id="1）主要内容是新闻，其他内容是公司杰嫂介绍、广告洽谈"><a href="#1）主要内容是新闻，其他内容是公司杰嫂介绍、广告洽谈" class="headerlink" title="1）主要内容是新闻，其他内容是公司杰嫂介绍、广告洽谈"></a>1）主要内容是新闻，其他内容是公司杰嫂介绍、广告洽谈</h5><h5 id="2）具体的新闻内容"><a href="#2）具体的新闻内容" class="headerlink" title="2）具体的新闻内容"></a>2）具体的新闻内容</h5><h5 id="3）分类目录"><a href="#3）分类目录" class="headerlink" title="3）分类目录"></a>3）分类目录</h5><ul>
+<li>名称：可以使用友好的中文</li>
+<li>别名：通常是英文，让网址中不出现中文</li>
+<li>父节点；设置当前分类的父级分类节点</li>
+<li>图像描述：分类目录的简单介绍，可能不会起作用</li>
+</ul>
+<h4 id="4）写文章"><a href="#4）写文章" class="headerlink" title="4）写文章"></a>4）写文章</h4><p>&ensp;&ensp;点击<code>文章</code>下的<code>写文章</code>可以开始写第一篇文章。</p>
+<ul>
+<li><p>摘要</p>
+<p>可以介绍文章的主要内容，作用是在网站的文章列表中显示出摘要，让用户快速了解文章的主要内容，如果用户感兴趣，可以进一步点击<code>详细</code>按钮查看全文。</p>
+</li>
+<li><p>trackback</p>
+<p>如果发布的文章引用或者是借用了别人的内容，那么可以在此处通知对方。这个通知是Wordpress程序本身自动执行的，不需要你的参与。对方是否能接受这个通知，完全取决于对方使用的程序能不能接受通知。如果不能的话，即使你发布了通知，也没有任何作用。一旦对方能够接收通知，那么会在对方文章的评论区显示。不建议使用，因为会耗费一定的资源。</p>
+</li>
+<li><p>自定义栏目</p>
+<p>假如你发布的是商品，但是在发布界面根本找不到可以发布商品价格的地方。此时，就可以在这个地方填写你的产品价格。</p>
+</li>
+<li><p>评论</p>
+<p>可以显示文章的评论信息，也可以在此处给文章添加评论、管理用户的评论。</p>
+</li>
+<li><p>别名</p>
+<p>和分类目录的别名一样，是为了在网址中不显示中文</p>
+</li>
+<li><p>公开度</p>
+<p>可以设置文章的可见等级，私密只有管理员自己可以看到，如果设置为公开，则都可以看到，也可以设置为输入密码后可见。</p>
+</li>
+<li><p>形式</p>
+<p>可以选择文章的形式，但是会依据主题而有所不同。</p>
+</li>
+<li><p>分类目录</p>
+<p>设置当前文章所属分类。</p>
+</li>
+<li><p>标签</p>
+<p>设置文章的标签，用于用户快速查找含有同一标签的文章。</p>
+</li>
+<li><p>特色图像</p>
+<p>为文章设置缩略图，与摘要很相似，可以在网站上直接展示出缩略图，因为图像可以直观地展示很多信息，让用户快速了解文章主要内容，如果用户感兴趣就可以通过点击图片查看文章。</p>
+</li>
+</ul>
+<h4 id="5）写页面"><a href="#5）写页面" class="headerlink" title="5）写页面"></a>5）写页面</h4><p>&ensp;&ensp;关于层级：</p>
+<p>页面可以分层级，就像分类目录一样，可以一级、二级、三级、……N级。只是，很少对页面进行分级。</p>
+<p>&ensp;&ensp;关于排序：</p>
+<p>如果你的网站发布了一些页面，则可以通过排序设置这些页面的展示顺序。默认情况下，是按照页面名称的字母顺序——a、b、c……的升序形式呈现。在发布页面的时候设置排序数字，数字越小，排序越前。</p>
+<p>&ensp;&ensp;所有页面：</p>
+<p>和文章的管理方式一样。 </p>
+<h4 id="6）媒体库"><a href="#6）媒体库" class="headerlink" title="6）媒体库"></a>6）媒体库</h4><p>&ensp;&ensp;点击<code>多媒体</code>可以进入媒体库管理界面，在此处可以上传视频、音频、图片等。在媒体库可以编辑、永久删除、查看自己上传的媒体文件。</p>
+<p>&ensp;&ensp;替代文本：</p>
+<p>当图片无法正常显示时可以使用文本替代图片给出提示信息。</p>
+<p>&ensp;&ensp;添加媒体；</p>
+<p>使用<code>添加</code>按钮，在文件上传处可以看到文件上传的大小限制。</p>
+<h4 id="7）评论"><a href="#7）评论" class="headerlink" title="7）评论"></a>7）评论</h4><p>&ensp;&ensp;点击<code>评论</code>按钮可以对用户评论进行管理，以及查看用户评论的其他信息。可以驳回、回复、快速编辑、编辑、设为垃圾评论、移至回收站等。可以设置用户发表的评论是否需要批准才显示出来。</p>
+<h4 id="8）用户"><a href="#8）用户" class="headerlink" title="8）用户"></a>8）用户</h4><p>&ensp;&ensp;点击<code>用户</code>可以添加用户。在角色中可以对用户进行权限和分组的设置，不同的角色具有不同的权限。</p>
+<h4 id="9）用户"><a href="#9）用户" class="headerlink" title="9）用户"></a>9）用户</h4><p>&ensp;&ensp;点击<code>用户</code>可以编辑各个用户的信息、资料。</p>
+<p>可视化的编辑器：</p>
+<p>&ensp;&ensp;勾选与不勾选会改变编辑器的外观。</p>
+<p>管理界面配色方案：</p>
+<p>&ensp;&ensp;可以改变管理界面的主题配色。</p>
+<p>键盘快捷键：</p>
+<p>&ensp;&ensp;使用键盘快捷键可以添加一些功能，使得用户不用鼠标操作也可以实现一些功能。</p>
+<p>工具栏；</p>
+<p>&ensp;&ensp;网站前台登陆之后网站顶部会有一个工具栏，如果取消勾选则不显示。</p>
+<p>公开名称；</p>
+<p>&ensp;&ensp;设置网站显示昵称还是用户名。</p>
+<p>资料图片：</p>
+<p>&ensp;&ensp;需要在Gravatar网站上注册账户，并设置你的头像。当你在Wordpress网站中使用相同的邮件账户注册会员，那么Wordpress就会根据你的邮件账户信息从Gravatar网站中获取并展示出来。如果用户根本没有设置头像，则使用默认头像。</p>
+<p>&ensp;&ensp;可以在会话中登出其他地方的登陆状态。</p>
+<h5 id="1-所有用户"><a href="#1-所有用户" class="headerlink" title="1.所有用户"></a>1.所有用户</h5><p>&ensp;&ensp;用于管理用户，用于管理用户发表的文章、更改用户权限等。可以在选择用户进行资料更改。</p>
+<h4 id="10）工具"><a href="#10）工具" class="headerlink" title="10）工具"></a>10）工具</h4><h5 id="1-快速发布"><a href="#1-快速发布" class="headerlink" title="1.快速发布"></a>1.快速发布</h5><h5 id="ensp-ensp-首先需要将快速发布拖到浏览器书签栏，然后在其他的网页中将其他的网页截取下来进行编辑，然后发布为自己的网页。"><a href="#ensp-ensp-首先需要将快速发布拖到浏览器书签栏，然后在其他的网页中将其他的网页截取下来进行编辑，然后发布为自己的网页。" class="headerlink" title="&ensp;&ensp;首先需要将快速发布拖到浏览器书签栏，然后在其他的网页中将其他的网页截取下来进行编辑，然后发布为自己的网页。"></a>&ensp;&ensp;首先需要将<code>快速发布</code>拖到浏览器书签栏，然后在其他的网页中将其他的网页截取下来进行编辑，然后发布为自己的网页。</h5><h5 id="2-直接链接"><a href="#2-直接链接" class="headerlink" title="2.直接链接"></a>2.直接链接</h5><p>&ensp;&ensp;当不能使用快速发布时可以使用直接链接实现同样的功能。</p>
+<h4 id="11）外观"><a href="#11）外观" class="headerlink" title="11）外观"></a>11）外观</h4><p>&ensp;&ensp;点击<code>外观</code>进入外观管理界面。</p>
+<p><strong>主题</strong></p>
+<p>&ensp;&ensp;可以设置网站的主题，选择需要的主题，点击<code>启用</code>即可。可以通过不同的主题改变网站的视觉效果，同时，用户看到的网站的内容也会发生改变，显示什么内容是主题决定的，主题可以调用相应的内容。使用不同的主题，外观下的子菜单数量也不一样。</p>
+<p>&ensp;&ensp;主题文件放在<code>WWW/网站目录名/wp-content/themes/</code>目录下。</p>
+<p>&ensp;&ensp;<em>安装主题</em>：</p>
+<p>点击<code>主题&gt;添加主题</code>可以查看和安装主题库提供的主题，同时也支持上传下载的主题，或者自己将主题文件解压放到对应的文件夹下面。</p>
+<p><strong>自定义</strong></p>
+<p>&ensp;&ensp;站点的实时效果更改和预览 。 </p>
+<p><strong>菜单</strong></p>
+<p>&ensp;&ensp;可以在<code>编辑菜单</code>处，创建菜单，成功创建菜单之后，可以添加菜单项目。添加菜单项目之后还需要设置菜单， 主题位置可以设置菜单所在位置。还可以设置子级菜单。</p>
+<p><strong>顶部</strong></p>
+<p>&ensp;&ensp;可以在顶部添加图片等内容。</p>
+<p><strong>背景</strong></p>
+<p>&ensp;&ensp;可以设置网页的背景图片。</p>
+<h4 id="12）设置"><a href="#12）设置" class="headerlink" title="12）设置"></a>12）设置</h4><p><strong>常规</strong></p>
+<p>&ensp;&ensp;可以设置网站标题、副标题。其中Wordpress地址和站点地址可以不用修改。电子邮件地址用于接收站点相关通知的邮箱，一般是设置的管理员邮箱。成员资格用于设置网站是否允许注册，如果需要则勾选，其中新用户默认角色不要设置过高，一般保持不变，即为订阅者。时区设置依据所在国家来设置，还可以设置日期格式和时间格式。</p>
+<p><strong>撰写</strong></p>
+<p>&ensp;&ensp;设置默认文章分类目录、默认文章形式。可以设置通过邮件发布文章，并设置通过邮件发布的文章的默认目录。</p>
+<p>&ensp;&ensp;<em>更新服务</em>：当你发布新的文章和内容时，Wordpress会自动通知此处链接对应的服务，告诉它们，我们网站有内容更新。可以将百度的提供索引的网址加在下面，让百度收录，优化搜索。同时在发布文章时需要勾选<code>允许ping</code>，否则Wordpress不会通知相关的网站。</p>
+<p><strong>阅读</strong></p>
+<p>&ensp;&ensp;首页显示：设置首页显示的页面，可以指定需要显示在主页的页面。</p>
+<p>&ensp;&ensp;博客页面至多显示：一个页面中，最多显示几篇文章。如果文章的数量超出了此处的数值，则会分页显示。</p>
+<p><strong>讨论</strong></p>
+<p>&ensp;&ensp;默认文章设置：如果勾选<code>尝试通知文章中链接的博客</code>，则在发布文章时，如果文章中存在指向另一篇文章的超链接，则Wordpress会自动通知对方。不建议使用此项，容易产生垃圾信息。</p>
+<p>&ensp;&ensp;允许其他博客发送链接通知（pingback和trackback）到新文章：用于处理别人的通知，勾选表示允许发表评论，同时要以文章的设置为准，即文章设置为不允许则以文章设置为准。不建议勾选，将会占用资源。</p>
+<p>&ensp;&ensp;其他评论设置：评论规则，嵌套评论，分页显示评论等。</p>
+<p><strong>多媒体</strong></p>
+<p>&ensp;&ensp;Wordpress可以设置缩略图的尺寸，通过图片可以向用户传递信息。当上传图片时，Wordpress会自动生成不同尺寸的其他图片。这些图片默认以年月日进行分目录管理，保存在<code>WWW/wordpress/content/upload/</code>文件夹下。</p>
+<p><strong>固定链接</strong></p>
+<p>&ensp;&ensp;设置网址中显示的内容，即自定义URL结构。切换不同的链接结构，同一网页，网址会发生变化，这样是为了搜索引擎优化，搜索引擎不喜欢带有问号和层级特别深的网址。选择其他网址结构需要开启阿帕奇的rewrite功能。</p>
+<p>&ensp;&ensp;在自定义结构中：</p>
+<ul>
+<li><code>%post_id</code>代表内容编号</li>
+<li><code>%postname%</code>代表的是内容的名称</li>
+<li><code>%year%</code>代表的是内容发表的年份</li>
+<li><code>%monthnum</code>代表的是内容发表的月份</li>
+<li><code>%day%</code>代表的是内容发表的具体的日期</li>
+</ul>
+<p><strong>开启阿帕奇rewrite功能</strong></p>
+<p>&ensp;&ensp;打开其他选项，打开配置文件，选择<code>httpd-conf</code>文件，打开文件后使用查找功能，搜索<code>rewrite</code>，找到<code>LoadModule rewrite_module modules/mod_rewrite.so</code>去掉前面的<code>#</code>符号，开启功能。</p>
+<p><strong>分类目录和标签前缀</strong></p>
+<p>&ensp;&ensp;在固定链接中可以更改分类目录前缀和标签前缀。其中分类目录默认前缀为<code>category</code>，标签默认前缀为<code>tag</code>。</p>
+</li>
+</ul>
+<h4 id="13）用户注册网址和流程"><a href="#13）用户注册网址和流程" class="headerlink" title="13）用户注册网址和流程"></a>13）用户注册网址和流程</h4><p>&ensp;&ensp;打开网址<code>localhost/Wordpress/wp-login.php</code>，但需要提前勾选设置中的<code>成员资格——允许任何人注册</code>。进入注册界面后，根据提示填写英文用户名和电子邮箱，如果需要设置中文用户名需要对应设置，然后将会把注册的相关信息发送到邮箱，这是为了确保用户注册的邮箱是正确的。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">HEtinto(yujianming)</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://yoursite.com/2020/09/04/Wordpress%E4%BD%BF%E7%94%A8/">http://yoursite.com/2020/09/04/Wordpress%E4%BD%BF%E7%94%A8/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Wordpress/">Wordpress</a></div><div class="post_share"><div class="social-share" data-image="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/11/03/Git%E7%9A%84%E4%BD%BF%E7%94%A8/"><img class="prev-cover" src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/2020/09/01/%E6%80%80%E7%96%91%E8%AE%BA%EF%BC%88%E4%B8%80%EF%BC%89/"><img class="next-cover" src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">怀疑论（一）</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">HEtinto(yujianming)</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">17</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">12</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Wordpress%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">Wordpress安装与使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9C%A8%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BDwordpress"><span class="toc-number">1.1.</span> <span class="toc-text">一、在官网下载wordpress</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%AE%BF%E9%97%AEWordpress%E4%B8%AD%E7%9A%84index-php%E6%96%87%E4%BB%B6"><span class="toc-number">1.2.</span> <span class="toc-text">二、访问Wordpress中的index.php文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E4%B8%80%E6%AD%A5%E5%A1%AB%E5%86%99%E9%9C%80%E8%A6%81%E7%9A%84%E4%BF%A1%E6%81%AF"><span class="toc-number">1.2.1.</span> <span class="toc-text">下一步填写需要的信息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%99%BB%E9%99%86Wordpress"><span class="toc-number">1.3.</span> <span class="toc-text">三、登陆Wordpress</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81Wordpress%E4%B8%8B%E8%B4%9F%E8%B4%A3%E7%99%BB%E9%99%86%E5%92%8C%E9%AA%8C%E8%AF%81%E7%9A%84%E6%96%87%E4%BB%B6"><span class="toc-number">1.3.1.</span> <span class="toc-text">1、Wordpress下负责登陆和验证的文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E7%99%BB%E9%99%86%E6%88%90%E5%8A%9F%E5%90%8E%E8%B7%B3%E8%BD%AC%E5%88%B0%E7%AE%A1%E7%90%86%E5%91%98%E5%90%8E%E5%8F%B0"><span class="toc-number">1.3.2.</span> <span class="toc-text">2、登陆成功后跳转到管理员后台</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81Wordpress%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86"><span class="toc-number">1.3.3.</span> <span class="toc-text">3、Wordpress后台管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">1.安装插件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E7%AE%A1%E7%90%86%E5%B7%B2%E7%BB%8F%E5%AE%89%E8%A3%85%E7%9A%84%E6%8F%92%E4%BB%B6"><span class="toc-number">1.3.3.2.</span> <span class="toc-text">2.管理已经安装的插件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%BC%96%E8%BE%91%E6%8F%92%E4%BB%B6"><span class="toc-number">1.3.4.</span> <span class="toc-text">3.编辑插件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E8%A7%A3%E5%86%B3%E5%90%8E%E5%8F%B0%E5%8A%A0%E8%BD%BD%E8%BF%87%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">1.3.4.1.</span> <span class="toc-text">4.解决后台加载过慢的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%EF%BC%89%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E5%8A%A0%E8%BD%BD%E7%94%A8%E6%88%B7%E5%A4%B4%E5%83%8F%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">1.3.4.1.1.</span> <span class="toc-text">1）无法正常加载用户头像的问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%EF%BC%89%E8%B0%B7%E6%AD%8C%E5%AD%97%E4%BD%93%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-number">1.3.4.1.2.</span> <span class="toc-text">2）谷歌字体的原因</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%88%86%E7%B1%BB%E7%9B%AE%E5%BD%95"><span class="toc-number">1.3.4.2.</span> <span class="toc-text">1.分类目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%A0%87%E7%AD%BE"><span class="toc-number">1.3.4.3.</span> <span class="toc-text">2.标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E8%A7%84%E5%88%92%E7%BD%91%E7%AB%99"><span class="toc-number">1.3.4.4.</span> <span class="toc-text">3.规划网站</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%EF%BC%89%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9%E6%98%AF%E6%96%B0%E9%97%BB%EF%BC%8C%E5%85%B6%E4%BB%96%E5%86%85%E5%AE%B9%E6%98%AF%E5%85%AC%E5%8F%B8%E6%9D%B0%E5%AB%82%E4%BB%8B%E7%BB%8D%E3%80%81%E5%B9%BF%E5%91%8A%E6%B4%BD%E8%B0%88"><span class="toc-number">1.3.4.4.1.</span> <span class="toc-text">1）主要内容是新闻，其他内容是公司杰嫂介绍、广告洽谈</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%EF%BC%89%E5%85%B7%E4%BD%93%E7%9A%84%E6%96%B0%E9%97%BB%E5%86%85%E5%AE%B9"><span class="toc-number">1.3.4.4.2.</span> <span class="toc-text">2）具体的新闻内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3%EF%BC%89%E5%88%86%E7%B1%BB%E7%9B%AE%E5%BD%95"><span class="toc-number">1.3.4.4.3.</span> <span class="toc-text">3）分类目录</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%EF%BC%89%E5%86%99%E6%96%87%E7%AB%A0"><span class="toc-number">1.3.4.5.</span> <span class="toc-text">4）写文章</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5%EF%BC%89%E5%86%99%E9%A1%B5%E9%9D%A2"><span class="toc-number">1.3.4.6.</span> <span class="toc-text">5）写页面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6%EF%BC%89%E5%AA%92%E4%BD%93%E5%BA%93"><span class="toc-number">1.3.4.7.</span> <span class="toc-text">6）媒体库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7%EF%BC%89%E8%AF%84%E8%AE%BA"><span class="toc-number">1.3.4.8.</span> <span class="toc-text">7）评论</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8%EF%BC%89%E7%94%A8%E6%88%B7"><span class="toc-number">1.3.4.9.</span> <span class="toc-text">8）用户</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9%EF%BC%89%E7%94%A8%E6%88%B7"><span class="toc-number">1.3.4.10.</span> <span class="toc-text">9）用户</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%89%80%E6%9C%89%E7%94%A8%E6%88%B7"><span class="toc-number">1.3.4.10.1.</span> <span class="toc-text">1.所有用户</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10%EF%BC%89%E5%B7%A5%E5%85%B7"><span class="toc-number">1.3.4.11.</span> <span class="toc-text">10）工具</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%BF%AB%E9%80%9F%E5%8F%91%E5%B8%83"><span class="toc-number">1.3.4.11.1.</span> <span class="toc-text">1.快速发布</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ensp-ensp-%E9%A6%96%E5%85%88%E9%9C%80%E8%A6%81%E5%B0%86%E5%BF%AB%E9%80%9F%E5%8F%91%E5%B8%83%E6%8B%96%E5%88%B0%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B9%A6%E7%AD%BE%E6%A0%8F%EF%BC%8C%E7%84%B6%E5%90%8E%E5%9C%A8%E5%85%B6%E4%BB%96%E7%9A%84%E7%BD%91%E9%A1%B5%E4%B8%AD%E5%B0%86%E5%85%B6%E4%BB%96%E7%9A%84%E7%BD%91%E9%A1%B5%E6%88%AA%E5%8F%96%E4%B8%8B%E6%9D%A5%E8%BF%9B%E8%A1%8C%E7%BC%96%E8%BE%91%EF%BC%8C%E7%84%B6%E5%90%8E%E5%8F%91%E5%B8%83%E4%B8%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E7%BD%91%E9%A1%B5%E3%80%82"><span class="toc-number">1.3.4.11.2.</span> <span class="toc-text">&amp;ensp;&amp;ensp;首先需要将快速发布拖到浏览器书签栏，然后在其他的网页中将其他的网页截取下来进行编辑，然后发布为自己的网页。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E7%9B%B4%E6%8E%A5%E9%93%BE%E6%8E%A5"><span class="toc-number">1.3.4.11.3.</span> <span class="toc-text">2.直接链接</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11%EF%BC%89%E5%A4%96%E8%A7%82"><span class="toc-number">1.3.4.12.</span> <span class="toc-text">11）外观</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12%EF%BC%89%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.3.4.13.</span> <span class="toc-text">12）设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#13%EF%BC%89%E7%94%A8%E6%88%B7%E6%B3%A8%E5%86%8C%E7%BD%91%E5%9D%80%E5%92%8C%E6%B5%81%E7%A8%8B"><span class="toc-number">1.3.4.14.</span> <span class="toc-text">13）用户注册网址和流程</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/11/04/k8s%E4%BD%BF%E7%94%A8/" title="k8s学习"><img src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="k8s学习"/></a><div class="content"><a class="title" href="/2020/11/04/k8s%E4%BD%BF%E7%94%A8/" title="k8s学习">k8s学习</a><time datetime="2020-11-04T12:20:00.000Z" title="Created 2020-11-04 20:20:00">2020-11-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/03/Git%E7%9A%84%E4%BD%BF%E7%94%A8/" title="No title"><img src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2020/11/03/Git%E7%9A%84%E4%BD%BF%E7%94%A8/" title="No title">No title</a><time datetime="2020-11-03T14:56:51.901Z" title="Created 2020-11-03 22:56:51">2020-11-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/04/Wordpress%E4%BD%BF%E7%94%A8/" title="Wordpress安装与使用"><img src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Wordpress安装与使用"/></a><div class="content"><a class="title" href="/2020/09/04/Wordpress%E4%BD%BF%E7%94%A8/" title="Wordpress安装与使用">Wordpress安装与使用</a><time datetime="2020-09-04T00:22:00.000Z" title="Created 2020-09-04 08:22:00">2020-09-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/01/%E6%80%80%E7%96%91%E8%AE%BA%EF%BC%88%E4%B8%80%EF%BC%89/" title="怀疑论（一）"><img src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="怀疑论（一）"/></a><div class="content"><a class="title" href="/2020/09/01/%E6%80%80%E7%96%91%E8%AE%BA%EF%BC%88%E4%B8%80%EF%BC%89/" title="怀疑论（一）">怀疑论（一）</a><time datetime="2020-09-01T14:39:04.000Z" title="Created 2020-09-01 22:39:04">2020-09-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/08/20/HTML%E5%AD%A6%E4%B9%A0/" title="HTML学习笔记"><img src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HTML学习笔记"/></a><div class="content"><a class="title" href="/2020/08/20/HTML%E5%AD%A6%E4%B9%A0/" title="HTML学习笔记">HTML学习笔记</a><time datetime="2020-08-20T04:20:00.000Z" title="Created 2020-08-20 12:20:00">2020-08-20</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By HEtinto(yujianming)</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

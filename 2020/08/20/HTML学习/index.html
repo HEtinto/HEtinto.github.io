@@ -1,32 +1,241 @@
-extends includes/layout.pug
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HTML学习笔记 | Hexo</title><meta name="keywords" content="前端"><meta name="author" content="HEtinto(yujianming)"><meta name="copyright" content="HEtinto(yujianming)"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="HTML学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML学习笔记">
+<meta property="og:url" content="http://yoursite.com/2020/08/20/HTML%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="HTML学习笔记">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true">
+<meta property="article:published_time" content="2020-08-20T04:20:00.000Z">
+<meta property="article:modified_time" content="2020-08-21T14:34:06.242Z">
+<meta property="article:author" content="HEtinto(yujianming)">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://yoursite.com/2020/08/20/HTML%E5%AD%A6%E4%B9%A0/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-08-21 22:34:06'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-block content
-  #post
-    if top_img === false
-      include includes/header/post-info.pug
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-    article#article-container.post-content!=page.content
-    include includes/post/post-copyright.pug
-    .tag_share
-      if (theme.post_meta.post.tags)
-        .post-meta__tag-list
-          each item, index in page.tags.data
-            a(href=url_for(item.path)).post-meta__tags #[=item.name]
-      include includes/third-party/share/index.pug
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-    if theme.reward.enable
-      !=partial('includes/post/reward', {}, {cache: true})
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">17</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">12</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">HTML学习笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2020-08-20T04:20:00.000Z" title="Created 2020-08-20 12:20:00">2020-08-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2020-08-21T14:34:06.242Z" title="Updated 2020-08-21 22:34:06">2020-08-21</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="HTML学习笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="HTML学习笔记"><a href="#HTML学习笔记" class="headerlink" title="HTML学习笔记"></a>HTML学习笔记</h1><span id="more"></span>
 
-    //- ad
-    if theme.ad && theme.ad.post
-      .ads-wrap!=theme.ad.post
-
-    if theme.post_pagination
-      include includes/pagination.pug
-    if theme.related_post && theme.related_post.enable
-      != related_posts(page,site.posts)
-
-    if page.comments !== false && theme.comments && theme.comments.use
-      - var commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache: true})
-      
+<h3 id="1-1-1-HTML简述"><a href="#1-1-1-HTML简述" class="headerlink" title="1.1.1 HTML简述"></a>1.1.1 HTML简述</h3><ul>
+<li>HTML： 超文本标记语言，实质上是一种标记语言，不是编程语言，不能使用逻辑运算。通过标签将网络上的文档格式进行统一，使分散网络资源连接成为一个逻辑整体。</li>
+<li>超文本：是一种组织信息的方法，通过超链接将多种媒介关联起来。</li>
+<li>标记：用<code>&lt; &gt;</code>包裹的具有一定含义的内容。</li>
+</ul>
+<h3 id="1-1-2-HTML的功能"><a href="#1-1-2-HTML的功能" class="headerlink" title="1.1.2 HTML的功能"></a>1.1.2 HTML的功能</h3><ul>
+<li>展示在线的文档，其中包含了标题、文本、表格、列表以及照片等内容。</li>
+<li>通过超级链接检索在线信息。</li>
+<li>为获取远程服务而设计表单，可用于检索信息、定购产品等。</li>
+<li>在文档中直接包含电子表格、视频剪辑、声音剪辑以及其他一些应用。</li>
+</ul>
+<h3 id="1-1-3-HTM历次版本"><a href="#1-1-3-HTM历次版本" class="headerlink" title="1.1.3 HTM历次版本"></a>1.1.3 HTM历次版本</h3><ul>
+<li>HTML1.0</li>
+<li>HTML2.0</li>
+<li>HTML3.2</li>
+<li>HTML4.0</li>
+<li>HTM4.01</li>
+<li>HTML5.0</li>
+</ul>
+<h3 id="1-1-4-HTML与互联网介绍"><a href="#1-1-4-HTML与互联网介绍" class="headerlink" title="1.1.4 HTML与互联网介绍"></a>1.1.4 HTML与互联网介绍</h3><h3 id="1-1-5-动态网页与静态网页"><a href="#1-1-5-动态网页与静态网页" class="headerlink" title="1.1.5  动态网页与静态网页"></a>1.1.5  动态网页与静态网页</h3><p>&ensp;&ensp;<strong>静态网页：</strong>HTML代码与内容书写完毕后，页面的内容和显示效果就基本上不会发生变化了———<strong>除非你修改页面代码</strong>。</p>
+<p>&ensp;&ensp;<strong>动态网页：</strong>页面代码虽然没有变，但是显示的内容却可以<strong>随着时间，环境或者数据库操作的结果而发生改变的</strong>。</p>
+<p>&ensp;&ensp;<strong>注意：</strong>不要将动态网页和页面内容是否具有动画效果混为一谈，比如网页中幻灯片效果，文字滚动效果，如果内容本省没有变化，那么也属于静态网页。</p>
+<h3 id="1-1-6-什么是浏览器"><a href="#1-1-6-什么是浏览器" class="headerlink" title="1.1.6 什么是浏览器"></a>1.1.6 什么是浏览器</h3><p>&ensp;&ensp;浏览器是解释和执行HTML源码的工具。 </p>
+<h3 id="1-1-7-浏览器内核"><a href="#1-1-7-浏览器内核" class="headerlink" title="1.1.7 浏览器内核"></a>1.1.7 浏览器内核</h3><ul>
+<li>Trident内核：代表产品IE，又称为IE内核。是微软开发的一种排版引擎。使用Trident渲染引擎的浏览器有：IE\遨游、世界之窗浏览器、腾讯TT等。</li>
+<li>Gecko内核：代表产品Mozilla FirefoxGecko是一套开源的，C++编写的排版引擎。使用它最著名的浏览器有Firefox，Netscape6至9。</li>
+<li>WebKit内核：代表产品有Safair，主要用于Mac OS系统。使用它的浏览器是Safari和谷歌浏览器Chrome。</li>
+<li>Presto内核：代表产品OperaPresto是由Opera Software开发的浏览器排版引擎，它是世界公认最快的渲染速度的引擎。在13年之后，Opera宣布加入谷歌阵营，弃用。</li>
+<li>Blink内核：由Google和Opera Software开发的浏览器排版引擎，2013年4月发布。</li>
+</ul>
+<p>2.1 HTML文档 </p>
+<p>&ensp;&ensp;设置网站图标：输入<code>link:favicon</code>，按<code>Tab</code>键。</p>
+<p>&ensp;&ensp;引入外部样式文件：输入<code>link:css</code>，按<code>Tab</code>键。</p>
+<p>&ensp;&ensp;输入<code>!</code>+<code>Tab</code>或<code>html5</code>+<code>Tab</code>会自动生成文档结构。</p>
+<h3 id="2-1-1标签"><a href="#2-1-1标签" class="headerlink" title="2.1.1标签"></a>2.1.1标签</h3><p>&ensp;&ensp;1.<code>&lt;a&gt;&lt;/a&gt;</code>标签的<code>target</code>参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_blank</td>
+<td>在浏览器总在一个新打开、未命名的窗口中载入目标文档。</td>
+</tr>
+<tr>
+<td>_self</td>
+<td>默认为此参数，它使得目标文档在同一窗口打开。</td>
+</tr>
+<tr>
+<td>_parent</td>
+<td>这个目标使得文档载入父窗口或者包含来超链接引用的框架的框架集。如果这个引用是在窗口或者是在顶级框架中，那么它与目标_self等效。</td>
+</tr>
+<tr>
+<td>_top</td>
+<td>这个目标使得文档载入包含这个超链接的窗口，用_top目标将会清除所有被包含的框架并将文档载入整个浏览器窗口。</td>
+</tr>
+</tbody></table>
+<p>&ensp;&ensp;2.<code>&lt;img /&gt;</code>标签：</p>
+<ul>
+<li>用于加载外部图片</li>
+<li>src：用来设定加载的图片或图像的路径</li>
+<li>alt：当前图片加载失败时将会显示此内容</li>
+<li>title：当鼠标移动到图片上时给予提示性的文字</li>
+</ul>
+<p>&ensp;&ensp;3.<code>&lt;span&gt;&lt;/span&gt;</code>标签：</p>
+<p>与<code>&lt;div&gt;&lt;/div&gt;</code>标签一样是用来布局的，不同的是div会单独占用一行，而span不会；span标签用于行内布局。 </p>
+<p>&ensp;&ensp;<code>&lt;ul&gt;&lt;/ul&gt;/&lt;ol&gt;&lt;/ol&gt;</code>列表标签：</p>
+<ul>
+<li><code>&lt;ul&gt;</code>标签为无序列表</li>
+<li><code>&lt;ol&gt;</code>标签为有序列表</li>
+</ul>
+<p>&ensp;&ensp;4.注释标签<code>&lt;!--注释内容--&gt;</code> </p>
+<ul>
+<li>快捷键：<code>Ctrl+Shift+/</code></li>
+<li>浏览器不会解析注释内容</li>
+</ul>
+<h3 id="2-1-2-标签属性"><a href="#2-1-2-标签属性" class="headerlink" title="2.1.2 标签属性"></a>2.1.2 标签属性</h3><ul>
+<li>通常由<code>属性名=&quot;属性值&quot;</code>组成，注意只能用英文的标点符号。</li>
+<li>起附加信息的作用。</li>
+<li>不是所有标签都有属性，比如<code>&lt;br&gt;</code>标签。</li>
+</ul>
+<h3 id="2-1-3-文本格式化标签"><a href="#2-1-3-文本格式化标签" class="headerlink" title="2.1.3 文本格式化标签"></a>2.1.3 文本格式化标签</h3><ul>
+<li>通过标签来美化文本外观。</li>
+<li><code>&lt;b&gt;&lt;/b&gt;</code>和<code>&lt;strong&gt;&lt;/strong&gt;</code>标签：都有加粗作用，且都是行级标签，不会自动换行，但<code>strong</code>兼有强调作用。（强调主要用于SEO，提取关键字）</li>
+<li><code>&lt;i&gt;&lt;/i&gt;</code>和<code>&lt;em&gt;&lt;/em&gt;</code>标签：文字倾斜作用，都为行级标签，<code>&lt;em&gt;&lt;/em&gt;</code>标签具有强调作用。</li>
+<li><code>&lt;pre&gt;&lt;/pre&gt;</code>标签：预格式化文本，保留换行、空格及宽度，文字的字号会小一号。</li>
+<li><code>&lt;small&gt;&lt;/small&gt;</code>和<code>&lt;big&gt;&lt;/big&gt;</code>标签：前者让文字缩小一号，后者放大一号，同为行级标签，且不识别宽高。</li>
+<li><code>&lt;sub&gt;&lt;/sub&gt;</code>和<code>&lt;sup&gt;&lt;/sup&gt;</code>标签：前者为设置下标，后者为设置上标，用来调整文本正常显示的基线，且文字会自动小一号。</li>
+</ul>
+<h3 id="2-1-4-单双标签"><a href="#2-1-4-单双标签" class="headerlink" title="2.1.4 单双标签"></a>2.1.4 单双标签</h3><ul>
+<li>单标签：<code>&lt;br/&gt; &lt;hr/&gt; &lt;img/&gt; &lt;input/&gt; &lt;link/&gt; &lt;meta/&gt;</code>等，需要注意闭合。</li>
+<li>双标签：由<code>开始标签</code>和<code>结束标签</code>两部分构成，必须成对使用。</li>
+</ul>
+<p>例如<code>&lt;p&gt;&lt;/p&gt;</code>段落标签，其中<p>是开始标签，表示一个段落的开始，<code>&lt;/p&gt;</code>是结束标签，表示一个段落的结束。其他的双标签还有<code>&lt;heml&gt;&lt;/html&gt;、&lt;head&gt;&lt;/head&gt;、&lt;title&gt;&lt;/title&gt;、&lt;body&gt;&lt;/body&gt;、&lt;table&gt;&lt;/table&gt;、&lt;span&gt;&lt;/span&gt;、&lt;div&gt;&lt;/div&gt;、&lt;p&gt;&lt;/p&gt;、&lt;h1&gt;&lt;/h1&gt;</code>等.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">HEtinto(yujianming)</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://yoursite.com/2020/08/20/HTML%E5%AD%A6%E4%B9%A0/">http://yoursite.com/2020/08/20/HTML%E5%AD%A6%E4%B9%A0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a></div><div class="post_share"><div class="social-share" data-image="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/09/01/%E6%80%80%E7%96%91%E8%AE%BA%EF%BC%88%E4%B8%80%EF%BC%89/"><img class="prev-cover" src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">怀疑论（一）</div></div></a></div><div class="next-post pull-right"><a href="/2020/08/14/%E5%90%B4%E6%81%A9%E8%BE%BE%E2%80%94%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><img class="next-cover" src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">吴恩达-机器学习笔记</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">HEtinto(yujianming)</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">17</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">12</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">HTML学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-1-HTML%E7%AE%80%E8%BF%B0"><span class="toc-number">1.0.1.</span> <span class="toc-text">1.1.1 HTML简述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-2-HTML%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-number">1.0.2.</span> <span class="toc-text">1.1.2 HTML的功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-3-HTM%E5%8E%86%E6%AC%A1%E7%89%88%E6%9C%AC"><span class="toc-number">1.0.3.</span> <span class="toc-text">1.1.3 HTM历次版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-4-HTML%E4%B8%8E%E4%BA%92%E8%81%94%E7%BD%91%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.0.4.</span> <span class="toc-text">1.1.4 HTML与互联网介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-5-%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5%E4%B8%8E%E9%9D%99%E6%80%81%E7%BD%91%E9%A1%B5"><span class="toc-number">1.0.5.</span> <span class="toc-text">1.1.5  动态网页与静态网页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-6-%E4%BB%80%E4%B9%88%E6%98%AF%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="toc-number">1.0.6.</span> <span class="toc-text">1.1.6 什么是浏览器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-7-%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8"><span class="toc-number">1.0.7.</span> <span class="toc-text">1.1.7 浏览器内核</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1%E6%A0%87%E7%AD%BE"><span class="toc-number">1.0.8.</span> <span class="toc-text">2.1.1标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-%E6%A0%87%E7%AD%BE%E5%B1%9E%E6%80%A7"><span class="toc-number">1.0.9.</span> <span class="toc-text">2.1.2 标签属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-3-%E6%96%87%E6%9C%AC%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A0%87%E7%AD%BE"><span class="toc-number">1.0.10.</span> <span class="toc-text">2.1.3 文本格式化标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-4-%E5%8D%95%E5%8F%8C%E6%A0%87%E7%AD%BE"><span class="toc-number">1.0.11.</span> <span class="toc-text">2.1.4 单双标签</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/11/04/k8s%E4%BD%BF%E7%94%A8/" title="k8s学习"><img src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="k8s学习"/></a><div class="content"><a class="title" href="/2020/11/04/k8s%E4%BD%BF%E7%94%A8/" title="k8s学习">k8s学习</a><time datetime="2020-11-04T12:20:00.000Z" title="Created 2020-11-04 20:20:00">2020-11-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/03/Git%E7%9A%84%E4%BD%BF%E7%94%A8/" title="No title"><img src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2020/11/03/Git%E7%9A%84%E4%BD%BF%E7%94%A8/" title="No title">No title</a><time datetime="2020-11-03T14:56:51.901Z" title="Created 2020-11-03 22:56:51">2020-11-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/04/Wordpress%E4%BD%BF%E7%94%A8/" title="Wordpress安装与使用"><img src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Wordpress安装与使用"/></a><div class="content"><a class="title" href="/2020/09/04/Wordpress%E4%BD%BF%E7%94%A8/" title="Wordpress安装与使用">Wordpress安装与使用</a><time datetime="2020-09-04T00:22:00.000Z" title="Created 2020-09-04 08:22:00">2020-09-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/09/01/%E6%80%80%E7%96%91%E8%AE%BA%EF%BC%88%E4%B8%80%EF%BC%89/" title="怀疑论（一）"><img src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="怀疑论（一）"/></a><div class="content"><a class="title" href="/2020/09/01/%E6%80%80%E7%96%91%E8%AE%BA%EF%BC%88%E4%B8%80%EF%BC%89/" title="怀疑论（一）">怀疑论（一）</a><time datetime="2020-09-01T14:39:04.000Z" title="Created 2020-09-01 22:39:04">2020-09-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/08/20/HTML%E5%AD%A6%E4%B9%A0/" title="HTML学习笔记"><img src="https://github.com/HEtinto/MyPostImage/blob/master/blog/yande.re%20715244%20dress%20emori_miku_project%20mochizuki_shiina%20skirt_lift.jpg?raw=true" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HTML学习笔记"/></a><div class="content"><a class="title" href="/2020/08/20/HTML%E5%AD%A6%E4%B9%A0/" title="HTML学习笔记">HTML学习笔记</a><time datetime="2020-08-20T04:20:00.000Z" title="Created 2020-08-20 12:20:00">2020-08-20</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By HEtinto(yujianming)</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
