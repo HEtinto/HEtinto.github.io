@@ -137,7 +137,7 @@
 
   
   <url>
-    <loc>http://yoursite.com/tags/Git/</loc>
+    <loc>http://yoursite.com/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-03-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -151,7 +151,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/%E7%AE%97%E6%B3%95/</loc>
+    <loc>http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2021-03-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/Git/</loc>
     <lastmod>2021-03-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -159,13 +166,6 @@
   
   <url>
     <loc>http://yoursite.com/tags/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/</loc>
-    <lastmod>2021-03-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2021-03-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -193,14 +193,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/%E4%BA%92%E8%81%94%E7%BD%91/</loc>
+    <loc>http://yoursite.com/tags/%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1/</loc>
     <lastmod>2021-03-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1/</loc>
+    <loc>http://yoursite.com/tags/%E4%BA%92%E8%81%94%E7%BD%91/</loc>
     <lastmod>2021-03-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -221,14 +221,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/%E6%80%80%E7%96%91%E8%AE%BA/</loc>
+    <loc>http://yoursite.com/tags/%E7%BD%91%E7%AB%99/</loc>
     <lastmod>2021-03-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/%E7%BD%91%E7%AB%99/</loc>
+    <loc>http://yoursite.com/tags/%E6%80%80%E7%96%91%E8%AE%BA/</loc>
     <lastmod>2021-03-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -244,14 +244,14 @@
 
   
   <url>
-    <loc>http://yoursite.com/categories/Git/</loc>
+    <loc>http://yoursite.com/categories/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-03-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/%E7%AE%97%E6%B3%95/</loc>
+    <loc>http://yoursite.com/categories/Git/</loc>
     <lastmod>2021-03-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
